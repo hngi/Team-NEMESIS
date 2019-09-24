@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Lato:400,700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,8 @@
   position: relative;
   top: 3em;
   width: 50em !important;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
 }
 .first_column {
   background: #a5d9fa;
@@ -51,16 +55,19 @@ i:first-child {
 }
 p {
   font-size: 0.7em;
-  font-weight: 800;
+  font-weight: 700;
 }
 .first-paragraph {
-  font-size: 1.8em;
-  font-style: italic;
+  font-size: 1.7em;
+  font-family: "Fugaz One", cursive;
+  letter-spacing: 1px;
+  line-height: 66px;
 }
 h4 {
   text-align: center;
-  font-weight: 800;
+  font-weight: bolder;
   font-size: 1em;
+  line-height: 48px;
 }
 button {
   border: none;
