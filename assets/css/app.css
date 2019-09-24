@@ -1,0 +1,76 @@
+/* VARIABLES */
+:root {
+  /* Colors */
+  --primary: #5c17b2;
+  --light-primary: #7920e6;
+  --white: #ffffff;
+  --off-white: #eeeeee;
+  --dark: #333333;
+  --black: #000000;
+}
+
+/* BUTTONS */
+.button {
+  padding: 1rem inherit;
+  transition: 0.3s ease-in-out;
+}
+.button--primary {
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+.button--primary:hover {
+  color: var(--white);
+  background-color: var(--light-primary);
+}
+
+.button-outline {
+  color: var(--black);
+}
+
+/* FORMS */
+.form-container {
+  margin-top: 5rem;
+}
+
+.form button[type="submit"] {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* NAV */
+.header {
+  width: 100%;
+  margin: 1.5rem auto;
+}
+
+header .brand a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+header .brand a:hover {
+  color: var(--light-primary);
+}
+
+.nav__link a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.nav__link a:hover {
+  color: var(--light-primary);
+}
+
+.nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav .button {
+  transform: scale(1.1);
+}
