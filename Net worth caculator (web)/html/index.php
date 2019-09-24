@@ -9,12 +9,17 @@
 </head>
 <body>
 	<nav class="navbar">
-		<div class="logo"></div>
-		<div class="side-links">
+		<div class="logo">
+			<img src="https://res.cloudinary.com/okafohenrie/image/upload/v1569314110/Union_pbokvb.png" alt="logo"> 
+			<span>Rich</span>
+		</div>
+		<div class="nav-links">
 			<ul>
-				<li>Log In</li>
+				<li>Sign  In</li>
 				<li>Sign up</li>
-				<li></li>
+				<li>
+					<a href="#">Net Worth</a>
+				</li>
 			</ul>
 		</div>
 	</nav>
@@ -22,11 +27,12 @@
 		<div class="row">
 			<div class="col-md-6">
 				<h3>Calculate your networth in the simplest way possible</h3>
-				<p></p>
+				<p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text 
+				</p>
 				<a href="#">Get Started</a>
 			</div>
 			<div class="col-md-6">
-				<img src="#">
+				<img src="https://res.cloudinary.com/okafohenrie/image/upload/v1569313861/Group_fo7ah3.png" alt="netw.png">
 			</div>
 		</div>
 	</div>
