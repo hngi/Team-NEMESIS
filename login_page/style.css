@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  top: 3em;
+  width: 50em !important;
+}
+.first_column {
+  background: #a5d9fa;
+  height: 80vh;
+}
+.content1 {
+  text-align: center;
+  margin: 5em 0 0;
+}
+form {
+  margin: 5em 0.5em;
+}
+input[type="text"] {
+  width: 17em;
+  border: 2px solid #1b95e0;
+  border-radius: 10px;
+}
+input[type="password"] {
+  width: 17em;
+  border: 2px solid #1b95e0;
+  border-radius: 10px;
+}
+label {
+  font-size: 0.7em;
+  font-weight: bold;
+}
+i {
+  color: #1b95e0;
+}
+i:first-child {
+  font-size: 3em;
+}
+.fa,
+.fas {
+  font-size: 2em;
+}
+.fa,
+.far {
+  font-size: 2em;
+}
+p {
+  font-size: 0.7em;
+  font-weight: 800;
+}
+.first-paragraph {
+  font-size: 1.8em;
+  font-style: italic;
+}
+h4 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1em;
+}
+button {
+  width: 17em;
+  background: #1b95e0;
+  border-radius: 15px;
+  margin-top: 4em;
+}
