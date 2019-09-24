@@ -17,16 +17,16 @@
   margin: 5em 0 0;
 }
 form {
-  margin: 5em 0.5em;
+  margin: 7em 3em;
 }
 input[type="text"] {
   width: 17em;
-  border: 2px solid #1b95e0;
+  border: 2px solid #39a3e4;
   border-radius: 10px;
 }
 input[type="password"] {
   width: 17em;
-  border: 2px solid #1b95e0;
+  border: 2px solid #39a3e4;
   border-radius: 10px;
 }
 label {
@@ -62,7 +62,7 @@ h4 {
 }
 button {
   width: 17em;
-  background: #1b95e0;
-  border-radius: 15px;
-  margin-top: 4em;
+  background: #39a2e4 !important;
+  border-radius: 10px !important;
+  margin-top: 0.9em !important;
 }
