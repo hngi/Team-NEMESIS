@@ -4,7 +4,7 @@
 
 ## Stage 3 Tasks
 
-## Net worth calculator
+## Net worth calculator (on the `networth` branch)
 
 ### features
 
@@ -16,7 +16,7 @@
 * User enter liability
 * App calculates total networth of user at that time
 
-## Twitter bot
+## Twitter bot (on the `twitterbot` branch)
 
 ### features
 
