@@ -42,10 +42,12 @@ i:first-child {
 .fa,
 .fas {
   font-size: 2em;
+  margin-bottom: 0.4em;
 }
 .fa,
 .far {
   font-size: 2em;
+  margin-bottom: 0.4em;
 }
 p {
   font-size: 0.7em;
@@ -57,12 +59,17 @@ p {
 }
 h4 {
   text-align: center;
-  font-weight: 600;
+  font-weight: 800;
   font-size: 1em;
 }
 button {
+  border: none;
   width: 17em;
   background: #39a2e4 !important;
   border-radius: 10px !important;
   margin-top: 0.9em !important;
+}
+button:hover {
+  border: none;
+  background: #39a2e4c9 !important;
 }
