@@ -7,29 +7,33 @@
 }
 .container {
   position: relative;
-  top: 3em;
-  width: 50em !important;
+  top: 2em;
   font-family: "Lato", sans-serif;
   font-weight: 700;
 }
 .first_column {
   background: #a5d9fa;
-  height: 80vh;
+  height: 90vh;
+}
+.second_column {
+  height: 90vh;
+  width: 100%;
 }
 .content1 {
   text-align: center;
-  margin: 5em 0 0;
+  padding: 5em 0 0;
 }
 form {
-  margin: 7em 3em;
+  padding: 8em 3em;
 }
+
 input[type="text"] {
-  width: 17em;
+  width: 25em;
   border: 2px solid #39a3e4;
   border-radius: 10px;
 }
 input[type="password"] {
-  width: 17em;
+  width: 25em;
   border: 2px solid #39a3e4;
   border-radius: 10px;
 }
@@ -37,25 +41,19 @@ label {
   font-size: 0.7em;
   font-weight: bold;
 }
-i {
-  color: #1b95e0;
-}
-i:first-child {
-  font-size: 3em;
-}
-.fa,
-.fas {
-  font-size: 2em;
+.grow {
+  transition: all 0.2s ease-in-out;
+  width: 55px;
   margin-bottom: 0.4em;
+  cursor: pointer;
 }
-.fa,
-.far {
-  font-size: 2em;
-  margin-bottom: 0.4em;
+.grow:hover {
+  transform: scale(1.1);
 }
 p {
-  font-size: 0.7em;
+  font-size: 15px;
   font-weight: 700;
+  margin-bottom: 1.4em !important;
 }
 .first-paragraph {
   font-size: 1.7em;
@@ -65,18 +63,16 @@ p {
 }
 h4 {
   text-align: center;
-  font-weight: bolder;
+  font-weight: 900 !important;
   font-size: 1em;
   line-height: 48px;
 }
 button {
-  border: none;
-  width: 17em;
+  width: 25em;
   background: #39a2e4 !important;
   border-radius: 10px !important;
   margin-top: 0.9em !important;
 }
 button:hover {
-  border: none;
-  background: #39a2e4c9 !important;
+  background: #39a2e4d3 !important;
 }
