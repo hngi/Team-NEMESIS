@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Lato:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  position: relative;
+  top: 3em;
+  width: 50em !important;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+.first_column {
+  background: #a5d9fa;
+  height: 80vh;
+}
+
+.content1 {
+  text-align: center;
+  margin: 5em 0 0;
+}
+form {
+  margin: 2em 3em;
+}
+input[type="text"] {
+  width: 17em;
+  border: 2px solid #39a3e4;
+  border-radius: 10px;
+}
+input[type="password"] {
+  width: 17em;
+  border: 2px solid #39a3e4;
+  border-radius: 10px;
+}
+label {
+  font-size: 0.7em;
+  font-weight: bold;
+}
+i {
+  color: #1b95e0;
+}
+i:first-child {
+  font-size: 3em;
+}
+.fa,
+.fas {
+  font-size: 2em;
+  margin-bottom: 0.4em;
+}
+.fa,
+.far {
+  font-size: 2em;
+  margin-bottom: 0.4em;
+}
+p {
+  font-size: 0.7em;
+  font-weight: 700;
+}
+.first-paragraph {
+  font-size: 1.7em;
+  font-family: "Fugaz One", cursive;
+  letter-spacing: 1px;
+  line-height: 66px;
+}
+h3 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1em;
+  line-height: 48px;
+}
+button {
+  border: none;
+  width: 17em;
+  background: #39a2e4 !important;
+  border-radius: 10px !important;
+  margin-top: 0.9em !important;
+}
+button:hover {
+  border: none;
+  background: #39a2e4c9 !important;
+}
