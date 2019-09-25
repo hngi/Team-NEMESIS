@@ -10,7 +10,11 @@
   --dark: #333333;
   --black: #000000;
 }
-
+/*  LOGO  */
+ #logo{
+    position: relative;
+    bottom: 5px;
+}
 /* BUTTONS */
 .button {
   padding: 1rem inherit;
