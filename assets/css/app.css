@@ -145,7 +145,7 @@ nav .button {
 @media (max-width: 768px) {
   body {
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .nav {
     top: 0;
