@@ -5,6 +5,7 @@
   --light-primary: #7920e6;
   --white: #ffffff;
   --off-white: #eeeeee;
+  --gray: #716f74;
   --dark: #333333;
   --black: #000000;
 }
@@ -36,6 +37,11 @@
 .form button[type="submit"] {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.form .form-text,
+.form .form-text a {
+  color: var(--gray);
 }
 
 /* NAV */

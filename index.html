@@ -11,56 +11,64 @@
       crossorigin="anonymous"
     />
     <link href="http://fonts.googleapis.com/css?family=roboto" />
-    <link rel="stylesheet" type="text/css" href="./css/landingPageStyle.css" />
+    <link rel="stylesheet" href="./css/landingPageStyle.css" />
+    <link rel="stylesheet" href="/assets/css/app.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="logo">
-        <img
-          src="https://res.cloudinary.com/okafohenrie/image/upload/v1569314110/Union_pbokvb.png"
-          alt="logo"
-          id="logo"
-        />
-        <span id="logo-text">Rich</span>
-      </div>
-      <div class="nav-links">
-        <ul>
-          <li>
-            <a href="#" id="signin">Sign In</a>
-          </li>
-          <li>
-            <a href="" id="signup">Sign up</a>
-          </li>
-          <li>
-            <a href="#" id="netwth">Net Worth</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-6 landing-text">
-          <h3>
-            Calculate your networth<br />
-            in the simplest way<br />
-            possible
-          </h3>
-          <p>
-            is simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text
-          </p>
-          <a href="#">Get Started</a>
+      <header class="header row justify-content-center">
+        <div class="container row justify-content-between">
+          <h1 class="h3 brand text-uppercase">
+            <a href="/">
+              Rich
+            </a>
+          </h1>
+          <nav class="nav">
+            <ul class="d-flex align-items-center">
+              <li class="nav__link text-uppercase">
+                <a href="/signin.html">
+                  Sign In
+                </a>
+              </li>
+              <li class="nav__link text-uppercase">
+                <a href="/signup.html">
+                  Sign Up
+                </a>
+              </li>
+              <li>
+                <button class="btn button button--primary text-uppercase">
+                  Net Worth
+                </button>
+              </li>
+            </ul>
+          </nav>
         </div>
-        <div class="col-md-6">
-          <center>
-            <img
-              src="https://res.cloudinary.com/okafohenrie/image/upload/v1569313861/Group_fo7ah3.png"
-              alt="netw.png"
-              id="netw-img"
-            />
-          </center>
+      </header>
+      <main class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 landing-text">
+            <h3>
+              Calculate your networth<br />
+              in the simplest way<br />
+              possible
+            </h3>
+            <p>
+              is simply dummy text of the printing and typesetting industry.
+              Lorem Ipsum has been the industry's standard dummy text
+            </p>
+            <a href="#">Get Started</a>
+          </div>
+          <div class="col-md-6">
+            <center>
+              <img
+                src="https://res.cloudinary.com/okafohenrie/image/upload/v1569313861/Group_fo7ah3.png"
+                alt="netw.png"
+                id="netw-img"
+              />
+            </center>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
   </body>
 </html>
