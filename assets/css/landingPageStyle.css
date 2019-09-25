@@ -27,7 +27,7 @@ html {
 }
 .nav-links{
 	position: relative;
-	top:10px;
+	top:7px;
 	padding-right: 50px;
 }
 .navbar li{
@@ -94,9 +94,7 @@ html {
 }
 
 /**    BODY  **/
-.landing .row > div {
-  padding: 0;
-}
+
 .row{
 	margin: 0;
 }
@@ -122,46 +120,18 @@ html {
 }
 .col-md-6 h3{
 	width: 85%;
-	margin-top: 140px;
+	margin-top: 85px;
 	position: relative;
 	font-family: Lato;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 48px;
+	font-size: 46px;
 	letter-spacing: .027em;
 	line-height: 55px;
 
 	color: #5C17B2;
 }
-.col-md-6 p{
-	position: relative;
-	font-family: Lato;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	line-height: 24px;
-	text-align: justify;
 
-.row {
-  margin: 0;
-}
-.landing-text p {
-  padding-bottom: 20px;
-  padding-top: 5px;
-}
-.landing-text a {
-  padding: 5px 40px;
-  background: #5c17b2;
-  font-size: 23px;
-  color: #fff;
-  border-radius: 0.25rem;
-}
-.col-md-6 h2 {
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  color: #5c17b2;
-}
 .col-md-6 p {
   font-family: Lato;
   font-style: normal;
@@ -172,6 +142,12 @@ html {
 
   color: #000000;
 }
+
+#netw-img{
+	width: 85%;
+	margin-top: 40px;
+}
+
  
 /****  Page responsiveness ****/
 @media (max-width: 376px){
@@ -204,6 +180,9 @@ html {
 		font-size: 39px;
 		line-height: 40px;
 	}
+	.landing-text a{
+		margin-top: 10px;
+	}	
 }
 @media (max-width: 631px){
 	.logo{
@@ -219,6 +198,7 @@ html {
 		display: none;
 	}
 }
+
 
 @media (min-width: 376px) and (max-width: 767px){
 	.text-col{
@@ -244,6 +224,12 @@ html {
 		margin-top: 50px;
 		font-size: 39px;
 		line-height: 40px;
+	}
+}
+@media (min-width: 769px) and (max-width: 880px){
+	#netw-img{
+		margin-top: 100px;
+		width: 100%;
 	}
 }
 @media (min-width: 770px) and (max-width: 1152px){
