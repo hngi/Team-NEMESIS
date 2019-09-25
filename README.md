@@ -14,6 +14,13 @@
 * User send conversations to external drive from twitter
 * User logins to external drive to see tweets
 
+#### How to test
+
+* clone the repo
+* make sure python is installed and in your PATH variable
+* inside the nemesis folder type `python manage.py runserver`
+* go to your browser and visit `localhost:8000`
+
 >submission date: 28th of september 2019
 
 
