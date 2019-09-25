@@ -6,6 +6,50 @@ html {
 }
 
 /**   NAV   **/
+.navbar{
+	padding: 35px 15px 35px 15px;
+}
+.logo{
+	padding-left: 50px;
+}
+#logo{
+	position: relative;
+	bottom: 8px;
+}
+#logo-text{
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 27px;
+	line-height: 36px;
+	/* identical to box height */
+	color: #5C17B2;
+}
+.nav-links{
+	position: relative;
+	top:10px;
+	padding-right: 50px;
+}
+.navbar li{
+	display: inline;
+	list-style: none;
+}
+#signup, #signin{
+	margin-right: 50px;
+	font-weight: bold;
+	color: #5C17B2;
+}
+#signup:hover, #signin:hover{
+	color: #7920e6;
+	text-decoration: none;
+}
+
+#netwt-btn{
+	padding: 5px 10px;
+	background: #5C17B2;
+	color: #fff;
+	border-radius: .25rem
+}
 .navbar {
   padding: 35px 15px 35px 15px;
 }
@@ -44,11 +88,59 @@ html {
   color: #fff;
   border-radius: 0.25rem;
 }
+#netwt-btn:hover{
+	background: #7920e6;
+	text-decoration: none;
+}
 
 /**    BODY  **/
 .landing .row > div {
   padding: 0;
 }
+.row{
+	margin: 0;
+}
+.landing-text{
+	padding-left: 50px;
+	padding-right: 50px;
+}
+.landing-text p{
+	width: 85%;
+	padding-top: 5px;
+	padding-bottom: 20px;
+}
+.landing-text a{
+	padding: 5px 40px;
+	background: #5C17B2;
+	font-size: 23px;
+	color: #fff;
+	border-radius: .25rem
+}
+.landing-text a:hover{
+	background: #7920e6;
+	text-decoration: none;
+}
+.col-md-6 h3{
+	width: 85%;
+	margin-top: 140px;
+	position: relative;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 48px;
+	letter-spacing: .027em;
+	line-height: 55px;
+
+	color: #5C17B2;
+}
+.col-md-6 p{
+	position: relative;
+	font-family: Lato;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 24px;
+	text-align: justify;
 
 .row {
   margin: 0;
@@ -68,7 +160,6 @@ html {
   font-family: Lato;
   font-style: normal;
   font-weight: bold;
-
   color: #5c17b2;
 }
 .col-md-6 p {
@@ -81,3 +172,90 @@ html {
 
   color: #000000;
 }
+ 
+/****  Page responsiveness ****/
+@media (max-width: 376px){
+	body{
+		width: 375px;
+	}
+	
+	.text-col{
+		order: 1;
+	}
+
+	.img-col{
+		order: -1;
+	}
+
+	#netw-img{
+		margin: 0;
+		width: 100%;
+	}
+	.text-col{
+		width: 100%;
+		padding: 7px;
+	}
+	.col-md-6 h3,.col-md-6 p{
+		margin-left: auto; 	
+		margin-right: auto;
+	}
+	.col-md-6 h3{
+		margin-top: 70px;
+		font-size: 39px;
+		line-height: 40px;
+	}
+}
+@media (max-width: 631px){
+	.logo{
+		padding-left: 35px;
+	}
+	.nav-links{
+		padding-right: 5px;
+	}
+	#signup, #signin{
+		margin-right: 10px;
+	}
+	#netwt-btn{
+		display: none;
+	}
+}
+
+@media (min-width: 376px) and (max-width: 767px){
+	.text-col{
+		order: 1;
+	}
+	.img-col{
+		order: -1;
+	}
+	.col-md-6 h3,.col-md-6 p{
+		margin-left: auto; 	
+		margin-right: auto;
+	}
+	
+	#netw-img{
+		margin-top: 20px;
+		width: 100%;
+	}
+	.text-col{
+		width: 100%;
+		padding: 7px;
+	}
+	.col-md-6 h3{
+		margin-top: 50px;
+		font-size: 39px;
+		line-height: 40px;
+	}
+}
+@media (min-width: 770px) and (max-width: 1152px){
+	.col-md-6 h3{
+		width: 100%;
+		margin-top: 65px;
+		font-size: 33px;
+		line-height: 40px;
+	}
+	.landing-text{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+}
+
