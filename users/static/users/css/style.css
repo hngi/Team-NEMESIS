@@ -6,20 +6,15 @@
 }
 
 .container {
-    position: relative;
-    top: 2em;
+    /*position: relative;*/
+    /*top: 2em;*/
     font-family: "Lato", sans-serif;
     font-weight: 700;
 }
 
 .first_column {
     background: #a5d9fa;
-    height: 90vh;
-}
-
-.second_column {
-    height: 90vh;
-    width: 100%;
+    /*height: 90vh;*/
 }
 
 .content1 {
@@ -27,18 +22,18 @@
     padding: 5em 0 0;
 }
 
-form {
+/*form {
     padding: 8em 3em;
-}
+}*/
 
 input[type="text"] {
-    width: 25em;
+    /*width: 25em;*/
     border: 2px solid #39a3e4;
     border-radius: 10px;
 }
 
 input[type="password"] {
-    width: 25em;
+    /*width: 25em;*/
     border: 2px solid #39a3e4;
     border-radius: 10px;
 }
@@ -80,7 +75,7 @@ h4 {
 }
 
 button {
-    width: 25em;
+    width: 100%;
     background: #39a2e4 !important;
     border-radius: 10px !important;
     margin-top: 0.9em !important;
@@ -124,34 +119,43 @@ button:hover {
   box-sizing: border-box;
 }
 .container {
-  position: relative;
-  top: 2em;
+  /*position: relative;*/
+  /*top: 2em;*/
   font-family: "Lato", sans-serif;
   font-weight: 700;
 }
 .first_column {
   background: #a5d9fa;
-  height: 90vh;
+  /*height: 90vh;*/
 }
 .second_column {
-  height: 90vh;
+  /*height: 90vh;*/
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .content1 {
   text-align: center;
   padding: 5em 0 0;
+  margin-bottom: 40px;
 }
-form {
+/*form {
   padding: 8em 3em;
-}
+}*/
 
 input[type="text"] {
-  width: 25em;
+  /*width: 25em;*/
   border: 2px solid #39a3e4;
   border-radius: 10px;
 }
 input[type="password"] {
   /* width: 25em; */
+  border: 2px solid #39a3e4;
+  border-radius: 10px;
+}
+input[type="email"] {
+   /*width: 25em; */
   border: 2px solid #39a3e4;
   border-radius: 10px;
 }
@@ -186,11 +190,31 @@ h4 {
   line-height: 48px;
 }
 button {
-  width: 25em;
+  /*width: 25em;*/
   background: #39a2e4 !important;
   border-radius: 10px !important;
   margin-top: 0.9em !important;
 }
 button:hover {
   background: #39a2e4d3 !important;
+}
+
+a {
+    color: #1b94e0;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/*styles for desktop view*/
+@media(min-width: 999px){
+  form{
+    margin-left: 50px;
+  }
+  .page{
+    margin-top: 50px;
+  }
+}
+
+.input-box{
+  width:100%;
 }
