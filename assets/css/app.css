@@ -5,6 +5,7 @@
   --light-primary: #7920e6;
   --white: #ffffff;
   --off-white: #eeeeee;
+  --gray: #716f74;
   --dark: #333333;
   --black: #000000;
 }
@@ -36,6 +37,11 @@
 .form button[type="submit"] {
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.form .form-text,
+.form .form-text a {
+  color: var(--gray);
 }
 
 /* NAV */
@@ -74,4 +80,37 @@ nav ul li {
 
 nav .button {
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: 0.56s ease-in-out;
+  }
+  .nav.nav--open {
+    transform: translateX(0);
+  }
+  .nav ul {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .nav ul li {
+    margin-top: 1rem;
+  }
+
+  .hamburger {
+    z-index: 11;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
 }

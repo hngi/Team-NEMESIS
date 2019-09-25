@@ -10,6 +10,10 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="assets/css/app.css" />
     <title>Login - Net Worth App</title>
   </head>
@@ -22,7 +26,10 @@
               Rich
             </a>
           </h1>
-          <nav class="nav">
+          <div class="hamburger js-hamburger align-self-middle">
+            <span class="fa fa-bars"></span>
+          </div>
+          <nav class="nav js-nav">
             <ul class="d-flex align-items-center">
               <li class="nav__link text-uppercase">
                 <a href="/signin.html">
@@ -86,5 +93,6 @@
         </div>
       </main>
     </div>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>
