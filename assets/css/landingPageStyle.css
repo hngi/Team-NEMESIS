@@ -1,10 +1,9 @@
-body,html{
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
-
 
 /**   NAV   **/
 .navbar{
@@ -51,14 +50,52 @@ body,html{
 	color: #fff;
 	border-radius: .25rem
 }
+.navbar {
+  padding: 35px 15px 35px 15px;
+}
+.logo {
+  padding-left: 50px;
+}
+#logo {
+  position: relative;
+  bottom: 8px;
+}
+#logo-text {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 36px;
+  /* identical to box height */
+  color: #5c17b2;
+}
+.nav-links {
+  padding-right: 50px;
+}
+.navbar li {
+  display: inline;
+  list-style: none;
+}
+#signup,
+#signin {
+  margin-right: 50px;
+  font-weight: bold;
+  color: #5c17b2;
+}
+#netwt-btn {
+  padding: 5px 10px;
+  background: #5c17b2;
+  color: #fff;
+  border-radius: 0.25rem;
+}
 #netwt-btn:hover{
 	background: #7920e6;
 	text-decoration: none;
 }
 
 /**    BODY  **/
-.container-fluid{
-	padding:20px;
+.landing .row > div {
+  padding: 0;
 }
 .row{
 	margin: 0;
@@ -105,16 +142,38 @@ body,html{
 	line-height: 24px;
 	text-align: justify;
 
-	color: #000000;
+.row {
+  margin: 0;
 }
+.landing-text p {
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+.landing-text a {
+  padding: 5px 40px;
+  background: #5c17b2;
+  font-size: 23px;
+  color: #fff;
+  border-radius: 0.25rem;
+}
+.col-md-6 h2 {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  color: #5c17b2;
+}
+.col-md-6 p {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: justify;
 
-#netw-img{
-	height: 85%;
-	width: 85%;
-	margin-top: 100px;
+  color: #000000;
 }
  
-
+/****  Page responsiveness ****/
 @media (max-width: 376px){
 	body{
 		width: 375px;
@@ -199,3 +258,4 @@ body,html{
 		padding-right: 30px;
 	}
 }
+
