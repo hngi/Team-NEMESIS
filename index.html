@@ -10,6 +10,10 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link href="http://fonts.googleapis.com/css?family=roboto" />
     <link rel="stylesheet" href="./css/landingPageStyle.css" />
     <link rel="stylesheet" href="/assets/css/app.css" />
@@ -23,7 +27,10 @@
               Rich
             </a>
           </h1>
-          <nav class="nav">
+          <div class="hamburger js-hamburger align-self-middle">
+            <span class="fa fa-bars"></span>
+          </div>
+          <nav class="nav js-nav">
             <ul class="d-flex align-items-center">
               <li class="nav__link text-uppercase">
                 <a href="/signin.html">
@@ -56,19 +63,21 @@
               is simply dummy text of the printing and typesetting industry.
               Lorem Ipsum has been the industry's standard dummy text
             </p>
-            <a href="#">Get Started</a>
+            <a href="#" class="btn button button--primary">Get Started</a>
           </div>
           <div class="col-md-6">
-            <center>
-              <img
-                src="https://res.cloudinary.com/okafohenrie/image/upload/v1569313861/Group_fo7ah3.png"
-                alt="netw.png"
-                id="netw-img"
-              />
-            </center>
+            <!-- <center class="img-wrapper"> -->
+            <img
+              src="https://res.cloudinary.com/okafohenrie/image/upload/v1569313861/Group_fo7ah3.png"
+              alt="netw.png"
+              id="netw-img"
+              style="width: 100%"
+            />
+            <!-- </center> -->
           </div>
         </div>
       </main>
     </div>
+    <script src="./assets/js/app.js"></script>
   </body>
 </html>

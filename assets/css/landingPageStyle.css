@@ -1,74 +1,90 @@
-body,html{
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
-.navbar{
-	padding: 10px;
+/**   NAV   **/
+.navbar {
+  padding: 35px 15px 35px 15px;
 }
-.logo{
-	padding-left: 50px;
+.logo {
+  padding-left: 50px;
 }
-#logo{
-	position: relative;
-	bottom: 8px;
+#logo {
+  position: relative;
+  bottom: 8px;
 }
-#logo-text{
-	font-family: Lato;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 27px;
-	line-height: 36px;
-	/* identical to box height */
-	color: #5C17B2;
+#logo-text {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 36px;
+  /* identical to box height */
+  color: #5c17b2;
 }
-.nav-links{
-	padding-right: 50px;
+.nav-links {
+  padding-right: 50px;
 }
-.navbar li{
-	display: inline;
-	list-style: none;
+.navbar li {
+  display: inline;
+  list-style: none;
 }
-#signup, #signin{
-	margin-right: 5px;
+#signup,
+#signin {
+  margin-right: 50px;
+  font-weight: bold;
+  color: #5c17b2;
 }
-
-
-.container-fluid{
-	padding:20px;
-}
-.row{
-	margin: 0;
-}
-.landing-text{
-	padding-left: 50px;
-	padding-right: 50px;
-}
-.col-md-6 h3{
-	margin-top: 150px;
-	font-family: Lato;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 45px;
-	line-height: 60px;
-
-	color: #5C17B2;
-}
-.col-md-6 p{
-	font-family: Lato;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	line-height: 24px;
-	text-align: justify;
-
-	color: #000000;
+#netwt-btn {
+  padding: 5px 10px;
+  background: #5c17b2;
+  color: #fff;
+  border-radius: 0.25rem;
 }
 
-#netw-img{
-	height: 85%;
-	width: 85%;
-	margin-top: 100px;
+/**    BODY  **/
+.container-fluid {
+  padding: 20px;
+}
+.row {
+  margin: 0;
+}
+.landing-text {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.landing-text p {
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+.landing-text a {
+  padding: 5px 40px;
+  background: #5c17b2;
+  font-size: 23px;
+  color: #fff;
+  border-radius: 0.25rem;
+}
+.col-md-6 h3 {
+  margin-top: 140px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 55px;
+
+  color: #5c17b2;
+}
+.col-md-6 p {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: justify;
+
+  color: #000000;
 }
