@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+{% load static %}
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Nemesis Twitter Bot Sign Up Page</title>
+    <title>Nemesis Twitter Bot Login Page</title>
 
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'users/css/style.css' %}" />
 </head>
 
 <body>
-    <div class="container">
+    <div class="container page">
         <div class="row">
             <div class="col-sm-6 first_column">
                 <div class="content1">
@@ -27,31 +27,27 @@
                 </div>
             </div>
             <div class="col-sm-6 second_column">
-                <form>
+                <form method="post">
+                {% csrf_token %}
                     <div class="form-group">
-                        <h4>Create an account</h4>
-                        <label for="exampleinputusername">Username</label>
-                        <input type="text" class="form-control" id="exampleinputusername" aria-describedby="textHelp" />
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleinputemail">Email</label>
-                        <input type="text" class="form-control" id="exampleinputemail" aria-describedby="textHelp" />
+                        <h4>Welcome</h4>
+                        <label for="exampleInputEmail1">Username</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="textHelp" />
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
                         <input type="password" class="form-control" id="exampleInputPassword1" />
                     </div>
-                    <div class="form-group">
-                        <label for="examplerepeatpassword">Repeat password</label>
-                        <input type="password" class="form-control" id="examplerepeatpassword" />
-                    </div>
-                    <button type="submit" class="btn btn-primary">Sign up</button>
+
+                    <button type="submit" class="btn btn-primary">Log In</button>
                     <div>
                         <div>
                         </div>
                     </div>
-                    <button class="loginrdr"> <a href="index.html">Log in</a></button>
-
+                    <div class="form-group text-center mt-3">
+                        <p>don't have an account? <a href="{% url 'signup' %}">sign up</a></p>
+                    </div>
+                    {% comment %} <button class="signuprdr"> <a href="{% url 'signup' %}">Sign up</a></button> {% endcomment %}
                 </form>
             </div>
         </div>
