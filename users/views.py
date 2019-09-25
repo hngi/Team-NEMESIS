@@ -7,11 +7,21 @@ from pprint import pprint
 
 
 def index(request):
-    user_list = User.objects.all()
     template = loader.get_template('users/index.html')
-    context = {'user_list': user_list}
+    context = {}
     return HttpResponse(template.render(context, request))
-    # return HttpResponse("the data is " + user_list)
+
+
+def signup(request):
+    template = loader.get_template('users/signup.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
+
+
+def signin(request):
+    template = loader.get_template('users/index.html')
+    context = {}
+    return HttpResponse(template.render(context, request))
 
 
 def details(request, id):
