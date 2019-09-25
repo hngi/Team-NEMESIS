@@ -51,6 +51,7 @@ header .brand a {
 
 header .brand a:hover {
   color: var(--light-primary);
+  text-decoration: none;
 }
 
 .nav__link a {
