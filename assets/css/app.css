@@ -81,20 +81,30 @@ nav ul li {
 nav .button {
   transform: scale(1.1);
 }
+.hamburger {
+  display: none;
+}
+.landing {
+  margin-top: 5rem;
+}
 
 @media (max-width: 768px) {
+  body {
+    width: 100vw;
+    overflow: hidden;
+  }
   .nav {
     top: 0;
     left: 0;
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 100vw;
     background-color: #ffffff;
     z-index: 10;
     align-items: center;
     justify-content: center;
-    transform: translateX(100%);
-    transition: 0.56s ease-in-out;
+    transform: translateX(100vw);
+    transition: transform 0.56s ease-in-out;
   }
   .nav.nav--open {
     transform: translateX(0);
@@ -109,8 +119,16 @@ nav .button {
   }
 
   .hamburger {
+    display: block;
     z-index: 11;
     cursor: pointer;
     padding: 0.5rem;
+  }
+  .landing {
+    margin-top: 2rem;
+  }
+
+  .img-wrapper {
+    margin-top: 3rem;
   }
 }
