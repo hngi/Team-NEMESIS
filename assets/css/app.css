@@ -5,11 +5,16 @@
   --light-primary: #7920e6;
   --white: #ffffff;
   --off-white: #eeeeee;
+  --light-gray: #dee2e6;
   --gray: #716f74;
   --dark: #333333;
   --black: #000000;
 }
-
+/*  LOGO  */
+ #logo{
+    position: relative;
+    bottom: 5px;
+}
 /* BUTTONS */
 .button {
   padding: 1rem inherit;
@@ -42,6 +47,27 @@
 .form .form-text,
 .form .form-text a {
   color: var(--gray);
+}
+
+.currency-input {
+  position: relative;
+  height: max-content;
+}
+
+.currency-input input {
+  padding-left: 1.4rem;
+}
+
+.currency-input::before {
+  position: absolute;
+  content: attr(data-currency);
+  top: -1px;
+  transform: translateY(50%);
+  left: 0.5rem;
+  color: var(--primary);
+  height: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 /* NAV */
@@ -88,22 +114,54 @@ nav .button {
   margin-top: 5rem;
 }
 
+.result {
+  border-radius: 0.125rem;
+  border: 2px dashed var(--gray);
+  background-color: var(--light-gray);
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  width: max-content;
+  display: flex;
+  align-items: center;
+}
+
+.result__currency {
+  margin-right: 0.5rem;
+  color: var(--dark);
+  margin-bottom: 0;
+}
+
+.result__amount {
+  /* color: */
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+/* SECTIONS */
+.section {
+  margin-top: 4.8rem;
+}
+
+.assets-section {
+  border-right: 1px solid var(--light-gray);
+}
+
 @media (max-width: 768px) {
   body {
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
   }
   .nav {
     top: 0;
     left: 0;
     position: absolute;
     height: 100%;
-    width: 100vw;
-    background-color: #ffffff;
+    width: 100%;
+    background-color: var(--white);
     z-index: 10;
     align-items: center;
     justify-content: center;
-    transform: translateX(100vw);
+    transform: translateX(100%);
     transition: transform 0.56s ease-in-out;
   }
   .nav.nav--open {
@@ -130,5 +188,18 @@ nav .button {
 
   .img-wrapper {
     margin-top: 3rem;
+  }
+
+  /* SECTION */
+  .section {
+    margin-top: 1.6rem;
+  }
+
+  .section-sm-2 {
+    margin-top: 2rem;
+  }
+
+  .assets-section {
+    border: none;
   }
 }

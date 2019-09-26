@@ -4,7 +4,11 @@ html {
   padding: 0;
   width: 100%;
 }
-
+/*  LOGO  */
+#logo{
+  position: relative;
+  bottom: 5px;
+}
 /**   NAV   **/
 .navbar{
 	padding: 35px 15px 35px 15px;
