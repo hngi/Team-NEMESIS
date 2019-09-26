@@ -28,22 +28,23 @@
 }
 
 form {
-    padding:6em 3em;
+    padding:5em 3em;
 }
 
 input[type="text"] {
-    /*width: 25em;*/
+    width: 550px;
     border: 2px solid #1B95E0;
     border-radius: 10px;
 }
 
 input[type="email"] {
+  width: 550px;
   border: 2px solid #1b95e0;
   border-radius: 10px;
 }
 
 input[type="password"] {
-    /*width: 25em;*/
+    width: 550px;
     border: 2px solid #1b95e0;
     border-radius: 10px;
 }
@@ -78,17 +79,17 @@ p {
     color: #000;
 }
 
-h4 {
+h3 {
     text-align: center;
     font-weight: 700 !important;
-    font-size: 1em;
+    font-size: 18px;
     line-height: 48px;
 }
 
 button {
-    width: 100%;
+    width: 550px;
     background: #39a2e4 !important;
-    border-radius: 10px !important;
+    border-radius: 20px !important;
     margin-top: 0.9em !important;
 }
 
@@ -96,7 +97,17 @@ button:hover {
     background: #39a2e4d3 !important;
 }
 
-a {
+button a {
+  color: #fff;
+}
+
+.loginrdr a {
+  color: #1b94e0;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.signuprdr a {
   color: #1b94e0;
   text-decoration: none;
   background-color: transparent;
@@ -104,7 +115,7 @@ a {
 
 .loginrdr {
     background: #FFFFFF !important;
-    border: 3px solid #1B95E0 !important;
+    border: 2px solid #1B95E0 !important;
     box-sizing: border-box !important;
     border-radius: 20px !important;
     width: 80px;
@@ -112,14 +123,14 @@ a {
     font-family: Lato;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 36px;
-    margin-right: 55px;
+    margin-right: 65px;
 }
 
 .signuprdr {
     background: #FFFFFF !important;
-    border: 3px solid #1B95E0 !important;
+    border: 2px solid #1B95E0 !important;
     box-sizing: border-box !important;
     border-radius: 20px !important;
     width: 80px;
@@ -127,7 +138,7 @@ a {
     font-family: Lato;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 36px;
-    margin-right: 55px;
+    margin-right: 65px;
 }
