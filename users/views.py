@@ -20,8 +20,12 @@ def signin(request):
     context = {}
     return HttpResponse(template.render(context, request))
 
-def details(request, id):
-    return HttpResponse("hello number %s" % id)
+def login(request):
+    users = User.objects.all()
+    pprint(users)
+    # for user in users:
+    #     if user.user_email == email:
+    return HttpResponse("this is the login page ")
 
 def add_user(request):
     if request.method == 'POST':
