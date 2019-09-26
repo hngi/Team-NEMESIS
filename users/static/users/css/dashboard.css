@@ -10,14 +10,17 @@ body {
 }
 .container {
   width: 80%;
-  height: 100%;
   margin: auto;
   font-family: "Lato", sans-serif;
   background: white;
 }
-.col-4 {
+.col-sm-4 {
   background: #ededed;
   text-align: center;
+}
+.col-sm-8 {
+  background: white;
+  padding: 50px;
 }
 p {
   font-size: 40px;
@@ -28,21 +31,20 @@ p {
 .fab {
   font-size: 70px;
 }
-button {
-  width: 164px;
+.btn-block {
+  max-width: 164px;
   height: 164px;
   border-radius: 100%;
   border: none;
   background: white;
+  margin: auto;
 }
 .card {
-  width: 568px;
-  height: 300px;
   background: #ffffff;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   border: none;
-  margin: 80px;
+  margin: 80px 0;
 }
 .card-body {
   text-align: center;
