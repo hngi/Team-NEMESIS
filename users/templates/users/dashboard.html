@@ -6,26 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Dashboard</title>
 
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="/users/static/users/css/dashboard.css" />
   </head>
   <body>
     <div class="container">
-      <div class="card">
-        <div class="card1">
+      <div class="row">
+        <div class="col-4">
           <p>Team Nemesis</p>
-          <button class="circle"><i class="fab fa-google"></i></button>
-          <p class="paragraph2">User profile</p>
+          <button><i class="fab fa-google"></i></button>
+          <p>User Profile</p>
         </div>
-        <div class="card2">
-          <div class="sm-card"><span>Saved TweetA</span></div>
-          <div class="sm-card1"><span>Saved TweetB</span></div>
-          <div class="sm-card2"><span>Saved TweetC</span></div>
+        <div class="col-6">
+          <div class="card">
+            <div class="card-body">
+              Saved TweetA
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              Saved TweetB
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              Saved TweetC
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <script
       src="https://kit.fontawesome.com/2534cfc66b.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
   </body>

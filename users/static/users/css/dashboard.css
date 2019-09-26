@@ -5,94 +5,49 @@
   padding: 0;
   box-sizing: border-box;
 }
-.container {
-  width: 100%;
-  height: 150vh;
-  font-family: "Lato", sans-serif;
+body {
   background: rgba(29, 161, 242, 0.4);
 }
-.card {
-  margin: auto;
-  background: #fff;
+.container {
   width: 80%;
-  height: 150vh;
+  height: 100%;
+  margin: auto;
+  font-family: "Lato", sans-serif;
+  background: white;
 }
-.card1 {
+.col-4 {
   background: #ededed;
-  width: 35%;
-  height: 150vh;
+  text-align: center;
 }
-.card2 {
-  margin: 2px 0;
+p {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 60px 0;
+  cursor: pointer;
 }
-.circle {
+.fab {
+  font-size: 70px;
+}
+button {
   width: 164px;
   height: 164px;
   border-radius: 100%;
   border: none;
   background: white;
-  margin: auto;
-  position: relative;
-  top: 160px;
-  left: 30%;
 }
-.fab {
-  font-size: 70px;
+.card {
+  width: 568px;
+  height: 300px;
+  background: #ffffff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: none;
+  margin: 80px;
 }
-p:first-child {
-  font-size: 40px;
+.card-body {
+  text-align: center;
+  font-size: 30px;
   font-weight: 700;
-  position: relative;
-  top: 84px;
-  left: 21%;
-}
-.paragraph2 {
-  font-size: 40px;
-  font-weight: 700;
-  position: relative;
-  top: 216px;
-  left: 28%;
-  cursor: pointer;
-}
-.sm-card {
-  position: absolute;
-  width: 568px;
-  height: 300px;
-  left: 826px;
-  top: 84px;
-  background: #ffffff;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-}
-.sm-card1 {
-  position: absolute;
-  width: 568px;
-  height: 300px;
-  left: 826px;
-  top: 444px;
-  background: #ffffff;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-}
-.sm-card2 {
-  position: absolute;
-  width: 568px;
-  height: 300px;
-  left: 826px;
-  top: 804px;
-  background: #ffffff;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-}
-span {
-  position: absolute;
-  left: 160px;
-  top: 140px;
-  font-family: Lato;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 48px;
-  color: #000000;
+  padding: 130px 0;
   cursor: pointer;
 }
