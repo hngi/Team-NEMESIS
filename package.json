@@ -2,23 +2,22 @@
   "name": "team-nemesis",
   "version": "1.0.0",
   "description": "![hng_logo](https://res.cloudinary.com/benchuks-inc/image/upload/v1569336547/hng.png)",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hngi/Team-NEMESIS.git"
+    "url": "git+https://github.com/Gabicle/Team-NEMESIS.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hngi/Team-NEMESIS/issues"
+    "url": "https://github.com/Gabicle/Team-NEMESIS/issues"
   },
-  "homepage": "https://github.com/hngi/Team-NEMESIS#readme",
+  "homepage": "https://github.com/Gabicle/Team-NEMESIS#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "connect-flash": "^0.1.1",
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "express-session": "^1.16.2",
