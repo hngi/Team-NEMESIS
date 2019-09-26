@@ -14,9 +14,9 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="assets/css/app.css" />
-    
-    
+    <link rel="stylesheet" href="css/app.css" />
+
+
     <title>Login - Net Worth App</title>
   </head>
   <body>
@@ -39,12 +39,12 @@
           <nav class="nav js-nav">
             <ul class="d-flex align-items-center">
               <li class="nav__link text-uppercase">
-                <a href="signin.html">
+                <a href="/signIn">
                   Sign In
                 </a>
               </li>
               <li class="nav__link text-uppercase">
-                <a href="signup.html">
+                <a href="/signUp">
                   Sign Up
                 </a>
               </li>
@@ -65,10 +65,11 @@
             <div class="col-md-6">
               <h1 class="h1 text-center">Sign in to your Rich Account</h1>
               <section class="form-container">
-                <form action="#" class="form">
+                <form action="/signIn" method="post" class="form">
                   <div class="form-group">
                     <label for="email">Email Address</label>
                     <input
+                    name="username"
                       class="form-control"
                       id="email"
                       type="email"
@@ -79,6 +80,7 @@
                   <div class="form-group">
                     <label for="password">Password</label>
                     <input
+                    name="password"
                       class="form-control"
                       id="password"
                       type="password"
@@ -91,7 +93,7 @@
                   </small>
                   <button
                     type="submit"
-                    class="button button--primary btn btn-block" 
+                    class="button button--primary btn btn-block"
                   >
                     Sign In
                   </button>
@@ -102,6 +104,6 @@
         </div>
       </main>
     </div>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
