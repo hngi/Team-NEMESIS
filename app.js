@@ -1,18 +1,23 @@
+
+//From @Gabbicle
+
 //jshint esversion:6
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
+const flash = require('connect-flash');
 const passport = require('passport');
 const passportLocalMongoose = require('passport-local-mongoose');
 const bodyParser = require('body-parser');
+// const findOrCreate = require('mongoose-findorcreate');
 
 const app = express();
 
 app.use(express.static("assets"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(session({
-  secret: 'edffdfdfdfdf',
+  secret: process.env.SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: { secure: true }
@@ -20,6 +25,7 @@ app.use(session({
 
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
 
 mongoose.connect("mongodb+srv://admin-gabrielle:Test123@cluster0-od0qv.mongodb.net/NetworthDB", {useNewurlParser:true});
 mongoose.set("useCreateIndex", true);
@@ -69,6 +75,7 @@ app.get("/welcome", function(req,res){
 
 app.get("/logout", function(req,res){
   req.logout();
+  req.flash('notice', 'Signed Out');
   res.redirect("/");
 });
 
@@ -81,7 +88,7 @@ User.register({username: req.body.username}, req.body.password, function(error, 
   }
   else{
     passport.authenticate("local")(req, res, function(){
-      res.sendFile(__dirname + "/networth.html");
+      res.sendFile(__dirname + "/app.html");
     });
   }
 } );
@@ -101,7 +108,7 @@ req.login(user, function(error){
   }
   else{
     passport.authenticate("local")(req,res,function(){
-      res.sendFile(__dirname + "/networth.html");
+      res.sendFile("/app.html", {flash: {notice: req.flash('notice')}});
     });
   }
 });
