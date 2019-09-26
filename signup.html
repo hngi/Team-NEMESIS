@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Nemesis Twitter Bot Sign Up Page</title>
 
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="container">
+    <div class="container page">
         <div class="row">
             <div class="col-sm-6 first_column">
                 <div class="content1">
@@ -27,31 +26,30 @@
                 </div>
             </div>
             <div class="col-sm-6 second_column">
-                <form>
+                <form method="post" action="">
                     <div class="form-group">
                         <h4>Create an account</h4>
+
                         <label for="exampleinputusername">Username</label>
-                        <input type="text" class="form-control" id="exampleinputusername" aria-describedby="textHelp" />
+                        <input name="name" type="text" class="form-control input-box" id="exampleinputusername" aria-describedby="textHelp" required />
                     </div>
+                    
                     <div class="form-group">
                         <label for="exampleinputemail">Email</label>
-                        <input type="text" class="form-control" id="exampleinputemail" aria-describedby="textHelp" />
+                        <input name="email" type="email" class="form-control input-box" id="exampleinputemail" aria-describedby="textHelp"  required />
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" />
+                        <input name="password" type="password" class="form-control" id="exampleInputPassword1"  required />
                     </div>
                     <div class="form-group">
                         <label for="examplerepeatpassword">Repeat password</label>
-                        <input type="password" class="form-control" id="examplerepeatpassword" />
+                        <input type="password" class="form-control" id="examplerepeatpassword"  required />
                     </div>
                     <button type="submit" class="btn btn-primary">Sign up</button>
-                    <div>
-                        <div>
-                        </div>
+                    <div class="form-group text-center mt-3">
+                        <p>already have an account? <a href="signin.html">Log in</a></p>
                     </div>
-                    <button class="loginrdr"> <a href="index.html">Log in</a></button>
-
                 </form>
             </div>
         </div>
