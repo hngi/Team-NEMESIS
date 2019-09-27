@@ -27,23 +27,23 @@
                 </div>
             </div>
             <div class="col-sm-6 second_column">
-                <form method="post" action="{% url 'add_user' %}">
+                <form method="post">
                 {% csrf_token %}
 
                     <div class="form-group">
                         <h4>Create an account</h4>
 
                         <label for="exampleinputusername">Username</label>
-                        <input name="name" type="text" class="form-control input-box" id="exampleinputusername" aria-describedby="textHelp" required />
+                        <input name="user_name" type="text" class="form-control input-box" id="exampleinputusername" aria-describedby="textHelp" required />
                     </div>
                     
                     <div class="form-group">
                         <label for="exampleinputemail">Email</label>
-                        <input name="email" type="email" class="form-control input-box" id="exampleinputemail" aria-describedby="textHelp"  required />
+                        <input name="user_email" type="email" class="form-control input-box" id="exampleinputemail" aria-describedby="textHelp"  required />
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input name="password" type="password" class="form-control" id="exampleInputPassword1"  required />
+                        <input name="user_password" type="password" class="form-control" id="exampleInputPassword1"  required />
                     </div>
                     <div class="form-group">
                         <label for="examplerepeatpassword">Repeat password</label>
