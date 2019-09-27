@@ -1,12 +1,1 @@
-[
-    {
-        "name": "tobecci1",
-        "email": "test@test.com",
-        "password": "$2y$10$gpgtmtfUS7wfqa3kV1Lhyu7htpA2cnoQQvDF365\/PHry9qT1gaVxa"
-    },
-    {
-        "name": "tobecci",
-        "email": "ojinakatochukwu@gmail.com",
-        "password": "$2y$10$UO6eZhpVMSomVZH8qLwo.eirSGZilL37dtrYyGqKRYJNdUXXn3L2G"
-    }
-]
+[{"name":"tobecci1","email":"test@test.com","password":"$2y$10$gpgtmtfUS7wfqa3kV1Lhyu7htpA2cnoQQvDF365\/PHry9qT1gaVxa"},{"name":"tobecci","email":"ojinakatochukwu@gmail.com","password":"$2y$10$UO6eZhpVMSomVZH8qLwo.eirSGZilL37dtrYyGqKRYJNdUXXn3L2G"},{"name":"tester","email":"tester@gmail.com","password":"$2y$10$hMB9wbXLNHYTDE0nDAU3YuUgPyWojMx7wK7Sb7EMBw0yyhwlayFZS"}]

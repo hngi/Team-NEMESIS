@@ -3,7 +3,7 @@ if (isset($_POST['submit'])) {
     $file_content = file_get_contents('users.json');
     $users_db = [];
     $users_db = json_decode($file_content);
-    $new_user['name'] = $_POST['name'];
+    $new_user['name'] = strtolower($_POST['name']);
     $new_user['password'] = $_POST['password'];
 
     //validation
