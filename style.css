@@ -142,3 +142,73 @@ button a {
     line-height: 36px;
     margin-right: 65px;
 }
+  
+                    .landingheader {
+                        font-family: Fugaz One;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 30px;
+                        line-height: 30px;
+                        margin-top: 40px;
+                        margin-bottom: 30px;
+                    }
+                    
+                    .landingcnt {
+                        position: absolute;
+                        margin: 0% 0 25% 25%;
+                        position: absolute;
+                        background: #FFFFFF;
+                        border-radius: 40px;
+                        width: 50%;
+                        height: 70%;
+                        text-align: center;
+                        font-family: Lato;
+                        font-style: normal;
+                        font-weight: bold;
+                        font-size: 14px;
+                        line-height: 29px;
+                    }
+                    
+                    .mainlanding {
+                        background: rgba(29, 161, 242, 0.4);
+                        text-align: center;
+                    }
+                    
+                    .word {
+                        color: #0168A7;
+                        margin: 20px;
+                        font-family: Montserrat;
+                        font-style: normal;
+                        font-weight: bold;
+                        line-height: 40px;
+                    }
+                    
+                    @media screen and (max-width: 1100px) and (min-width: 240px) {
+                        .landingcnt {
+                            position: absolute;
+                            margin: 0% 0 25% 25%;
+                            position: absolute;
+                            background: #FFFFFF;
+                            border-radius: 40px;
+                            width: 50%;
+                            height: 80%;
+                            text-align: center;
+                            font-family: Lato;
+                            font-style: normal;
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                        .mainlanding {
+                            background: rgba(29, 161, 242, 0.4);
+                            text-align: center;
+                        }
+                        .word {
+                            color: #0168A7;
+                            margin: 20px;
+                            font-family: Montserrat;
+                            font-style: normal;
+                            font-weight: bold;
+                            line-height: 35px;
+                        }
+                    }
