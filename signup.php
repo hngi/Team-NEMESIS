@@ -1,3 +1,29 @@
+<?php
+if (isset($_POST['submit'])) {
+    $file_content = file_get_contents('users.json');
+    $users_db = [];
+    $users_db = json_decode($file_content);
+    $new_user['name'] = strtolower($_POST['name']);
+    $new_user['email'] = strtolower($_POST['email']);
+    $new_user['password'] = password_hash($_POST['password'],PASSWORD_DEFAULT);
+
+    //validation
+    $user_exists = false;
+    foreach ($users_db as $user) {
+        if ($user->name == $new_user['name']) $user_exists = true;
+        if ($user->email == $new_user['email']) $user_exists = true;
+    }
+
+    if ($user_exists) {
+        header('Location: signup.php?error=user already exists');
+    } else {
+        $users_db[] = $new_user;
+        $users_db = json_encode($users_db);
+        file_put_contents('users.json', $users_db);
+        header('Location: signin.php?msg=user added successfully');
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +52,7 @@
             </div>
             <div class="col-sm-6 second_column">
                 <button class="loginrdr"> <a href="signin.php">Log in</a></button>
-                <form method="post" action="">
+                <form method="post" action="signup.php">
                     <div class="form-group">
                         <h3>Create an account</h3>
                         <label for="exampleinputusername">Username</label>
@@ -44,7 +70,14 @@
                         <label for="examplerepeatpassword">Repeat password</label>
                         <input type="password" class="form-control" id="examplerepeatpassword"  required />
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign up</button>
+                    <div class="form-group">
+                        <div class="text-center" style="color:#39a2e4d3;">
+                            <?php
+                            echo (isset($_GET['error'])) ? '<p>' . $_GET['error'] . '</p>' : "";
+                            ?>
+                        </div>
+                    </div>
+                    <button name="submit" type="submit" class="btn btn-primary">Sign up</button>
                     <button class="btn btn-primary"><a href="https://www.twitter.com">Sign up with your twitter account</a></button>
                 </form>
             </div>

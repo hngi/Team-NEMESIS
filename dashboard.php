@@ -1,3 +1,14 @@
+<?php
+session_start();
+if (!isset($_SESSION['logged_in'])) {
+  header('Location: signin.php');
+}
+if (isset($_GET['logout'])) {
+  $_SESSION = [];
+  session_destroy();
+  header('Location: signin.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
