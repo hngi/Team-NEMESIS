@@ -15,13 +15,6 @@
   background: rgba(29, 161, 292, 0.4);
 }
 
-@media screen and (min-width: 768px) {
-  .first_column,
-  .second_column {
-    height: 100vh;
-  }
-}
-
 .content1 {
     text-align: center;
     padding: 5em 0 0;
@@ -32,19 +25,19 @@ form {
 }
 
 input[type="text"] {
-    width: 550px;
+    width: 450px;
     border: 2px solid #1B95E0;
     border-radius: 10px;
 }
 
 input[type="email"] {
-  width: 550px;
+  width: 450px;
   border: 2px solid #1b95e0;
   border-radius: 10px;
 }
 
 input[type="password"] {
-    width: 550px;
+    width: 450px;
     border: 2px solid #1b95e0;
     border-radius: 10px;
 }
@@ -87,7 +80,7 @@ h3 {
 }
 
 button {
-    width: 550px;
+    width: 450px;
     background: #39a2e4 !important;
     border-radius: 20px !important;
     margin-top: 0.9em !important;
@@ -125,7 +118,8 @@ button a {
     font-weight: 500;
     font-size: 13px;
     line-height: 36px;
-    margin-right: 65px;
+    margin-right: 115px;
+    top: 50px;
 }
 
 .signuprdr {
@@ -140,75 +134,126 @@ button a {
     font-weight: 500;
     font-size: 13px;
     line-height: 36px;
-    margin-right: 65px;
+    margin-right: 115px;
+    top: 50px;
 }
   
-                    .landingheader {
-                        font-family: Fugaz One;
-                        font-style: normal;
-                        font-weight: normal;
-                        font-size: 30px;
-                        line-height: 30px;
-                        margin-top: 40px;
-                        margin-bottom: 30px;
-                    }
+.landingheader {
+    font-family: Fugaz One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
                     
-                    .landingcnt {
-                        position: absolute;
-                        margin: 0% 0 25% 25%;
-                        position: absolute;
-                        background: #FFFFFF;
-                        border-radius: 40px;
-                        width: 50%;
-                        height: 70%;
-                        text-align: center;
-                        font-family: Lato;
-                        font-style: normal;
-                        font-weight: bold;
-                        font-size: 14px;
-                        line-height: 29px;
-                    }
+.landingcnt {
+    position: absolute;
+    margin: 0% 0% 25% 25%;
+    position: absolute;
+    background: #FFFFFF;
+    border-radius: 30px;
+    width: 45%;
+    height: 75%;
+    text-align: center;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 29px;
+}
                     
-                    .mainlanding {
-                        background: rgba(29, 161, 242, 0.4);
-                        text-align: center;
-                    }
+.mainlanding {
+    background: rgba(29, 161, 242, 0.4);
+    text-align: center;
+}
                     
-                    .word {
-                        color: #0168A7;
-                        margin: 20px;
-                        font-family: Montserrat;
-                        font-style: normal;
-                        font-weight: bold;
-                        line-height: 40px;
-                    }
+.word p {
+    color: #0168A7;
+    margin: 10px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.landing-signup .loginrdr {
+    background: #FFFFFF !important;
+    border: 2px solid #1B95E0 !important;
+    box-sizing: border-box !important;
+    border-radius: 20px !important;
+    width: 80px;
+    float: right;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 36px;
+    margin-left: 10px;
+
+}
+
+.landing-signup .signuprdr {
+    background: #FFFFFF !important;
+    border: 2px solid #1B95E0 !important;
+    box-sizing: border-box !important;
+    border-radius: 20px !important;
+    width: 80px;
+    float: right;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 36px;
+}
                     
-                    @media screen and (max-width: 1100px) and (min-width: 240px) {
-                        .landingcnt {
-                            position: absolute;
-                            margin: 0% 0 25% 25%;
-                            position: absolute;
-                            background: #FFFFFF;
-                            border-radius: 40px;
-                            width: 50%;
-                            height: 80%;
-                            text-align: center;
-                            font-family: Lato;
-                            font-style: normal;
-                            font-weight: bold;
-                            font-size: 14px;
-                            line-height: 20px;
-                        }
-                        .mainlanding {
-                            background: rgba(29, 161, 242, 0.4);
-                            text-align: center;
-                        }
-                        .word {
-                            color: #0168A7;
-                            margin: 20px;
-                            font-family: Montserrat;
-                            font-style: normal;
-                            font-weight: bold;
-                            line-height: 35px;
-                        }
-                    }
+@media screen and (max-width: 1100px) and (min-width: 240px) {
+    .landingcnt {
+        position: absolute;
+        margin: 0% 0% 25% 25%;
+        position: absolute;
+        background: #FFFFFF;
+        border-radius: 30px;
+        width: 45%;
+        height: 75%;
+        text-align: center;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .mainlanding {
+        background: rgba(29, 161, 242, 0.4);
+        text-align: center;
+    }
+                        
+    .word p {
+        color: #0168A7;
+        margin: 10px;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 40px;
+    }
+}
+
+/*styles for desktop view*/
+
+@media(min-width: 999px) {
+    form { 
+      margin-left: 50px;
+    }
+  
+    .page {
+      margin-top: 50px;
+    }
+}
+  
+.input-box {
+    width:100%;
+}
