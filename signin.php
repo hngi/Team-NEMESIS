@@ -58,11 +58,11 @@ if (isset($_POST['submit'])) {
                 <div class="form-group">
                     <h3>Welcome</h3>
                     <label for="exampleInputEmail1">Username</label>
-                    <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="textHelp" />
+                    <input required name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="textHelp" />
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
-                    <input name="password" type="password" class="form-control" id="exampleInputPassword1" />
+                    <input required name="password" type="password" class="form-control" id="exampleInputPassword1" />
                 </div>
                 <div class="form-group">
                     <div class="text-center" style="color:#39a2e4d3;">
