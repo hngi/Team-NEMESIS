@@ -29,7 +29,6 @@
                 <form method="post" action="">
                     <div class="form-group">
                         <h3>Create an account</h3>
-
                         <label for="exampleinputusername">Username</label>
                         <input name="name" type="text" class="form-control input-box" id="exampleinputusername" aria-describedby="textHelp" required />
                     </div>
@@ -53,3 +52,4 @@
 </body>
 
 </html>
+
