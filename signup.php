@@ -5,7 +5,7 @@ if (isset($_POST['submit'])) {
     $users_db = json_decode($file_content);
     $new_user['name'] = $_POST['name'];
     $new_user['email'] = $_POST['email'];
-    $new_user['password'] = $_POST['password'];
+    $new_user['password'] = password_hash($_POST['password'],PASSWORD_DEFAULT);
     var_dump($new_user);
     //validation
     $user_exists = false;

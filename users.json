@@ -1,82 +1,12 @@
 [
     {
-        "name": "sphinx",
-        "email": "myemail",
-        "password": "mypass"
+        "name": "tobecci1",
+        "email": "test@test.com",
+        "password": "$2y$10$gpgtmtfUS7wfqa3kV1Lhyu7htpA2cnoQQvDF365\/PHry9qT1gaVxa"
     },
     {
-        "name": "sphinx1",
-        "email": "myemail",
-        "password": "mypass"
-    },
-    {
-        "name": "nawii",
+        "name": "tobecci",
         "email": "ojinakatochukwu@gmail.com",
-        "password": "benjamin"
-    },
-    {
-        "name": "nawii1",
-        "email": "ojinakatochukwu@gmail.com",
-        "password": "benjamin"
-    },
-    {
-        "name": "nawii2",
-        "email": "ojinakatochukwu@gmail.com",
-        "password": "benjamin"
-    },
-    {
-        "name": "sphinx000",
-        "email": "ojinakatochukwu@gmail.com",
-        "password": "$2y$10$auoV7zuJ3dHiQbLVQh4YN.q95kwO9Xenz2E4uO3beRo41sB1quLEq"
-    },
-    {
-        "name": "odpowq",
-        "email": "ojinakatochukwu@gmail.com",
-        "password": "$2y$10$uAkRm3B7z\/S9OrS8D8xv9OgRsnLLppjCPhcyySoLYUlIHXxySdc4m"
-    },
-    {
-        "name": "MDMWAPO",
-        "email": "ojinakatochukwu@gmail.comO",
-        "password": "$2y$10$71acZzQYAgjEa3hbq21p0.k6wr8KGLPgN8yzxplER5IemqsKbjQLa"
-    },
-    {
-        "name": "sphinx",
-        "email": "ojinakatochukwu@gmail.com",
-        "password": "$2y$10$Sl\/BpatlUwNmcXwtPyatgOlESBCQkmg161ooTAw03ufYoxF3y9ehG"
-    },
-    {
-        "name": "sphinx",
-        "email": "ojinakatochukwu@gmail.com",
-        "password": "$2y$10$GOubyZ68GB5uu\/K33iF\/J.alF6nwzbeGZ9q6sQ39krHf4yXC50VoS"
-    },
-    {
-        "name": "sphinx",
-        "email": "ojinakatochukwu@gmail.com",
-        "password": "$2y$10$Sj4Ul0Ko81JfyMP7O3H0YOL2UkpWdVNu8by.7k9SfMLyf.W8grEDK"
-    },
-    {
-        "name": "hello",
-        "email": "ojinakatochukwu@gmail.com",
-        "password": "$2y$10$.ZGVSE\/xsj2tO245vSFCbOv2eXdMRVAUYHdQkTwQbU9kT7rSqmiV2"
-    },
-    {
-        "name": "ojamsodq",
-        "email": "ojinakatochukwu@gmail.com",
-        "password": "$2y$10$zi6\/\/6PKodJKguby13yUaOhFJdniQw.1K23f6\/r.tj9rHIh9gtqPy"
-    },
-    {
-        "name": "wmnodajwo",
-        "email": "ojinakatochukwu@gmail.com",
-        "password": "$2y$10$z\/bq7wPBkAQNHDk4XbfnM.lLm5VkOsDNcXHe0bzUgoPB8ZAV93\/py"
-    },
-    {
-        "name": "hellokas ndoian",
-        "email": "ojinakatochukwu@gmail.com",
-        "password": "$2y$10$1UMYgHki\/vU5Rw04CxbYN.YpZ5gcveEo9bTjkOVt2BOt7bMtry6KS"
-    },
-    {
-        "name": "tester",
-        "email": "admin@test.com",
-        "password": "admin"
+        "password": "$2y$10$UO6eZhpVMSomVZH8qLwo.eirSGZilL37dtrYyGqKRYJNdUXXn3L2G"
     }
 ]

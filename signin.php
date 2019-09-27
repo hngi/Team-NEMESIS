@@ -4,23 +4,22 @@ if (isset($_POST['submit'])) {
     $users_db = [];
     $users_db = json_decode($file_content);
     $new_user['name'] = $_POST['name'];
-    $new_user['email'] = $_POST['email'];
-    $new_user['password'] = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $new_user['password'] = $_POST['password'];
 
     //validation
+    $validated = false;
+    $matches = 0;
     foreach ($users_db as $user) {
-        if ($user->name === $new_user['name']) {
-            header('Location: signup.php?error=user already exists');
-        } else {
-            $users_db[] = $new_user;
-            $users_db = json_encode($users_db);
-            var_dump($users_db);
-            if (file_put_contents('users.json', $users_db)) {
-                header('Location: signin.php');
-            } else {
-                header('Location: signup.php?error=there was an error');
+        if($user->name === $new_user['name'] || $user->email === $new_user['name']){
+            //verified
+            if(password_verify($new_user['password'],$user->password)){
+                header('Location: signin.php?msg=you are logged in');
+                $validated = true;
             }
         }
+    }
+    if(!$validated){
+    header('Location: signin.php?msg=incorrect details');
     }
 }
 ?>
@@ -53,18 +52,24 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
             <div class="col-sm-6 second_column">
-                <form method="post">
+                <form method="post" method="signin.php">
                     <div class="form-group">
                         <h4>Welcome</h4>
                         <label for="exampleInputEmail1">Username or email</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="textHelp" />
+                        <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="textHelp" required />
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" />
+                        <input  name="password" type="password" class="form-control" id="exampleInputPassword1" required />
                     </div>
-
-                    <button type="submit" class="btn btn-primary">Log In</button>
+                    <div class="form-group">
+                        <div class="text-center" style="color:#39a2e4d3;">
+                            <?php
+                            echo (isset($_GET['msg'])) ? '<p>' . $_GET['msg'] . '</p>' : "";
+                            ?>
+                        </div>
+                    </div>
+                    <button name="submit" type="submit" class="btn btn-primary">Log In</button>
                     <div>
                         <div>
                         </div>
