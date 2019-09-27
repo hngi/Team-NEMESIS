@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
     $new_user['name'] = strtolower($_POST['name']);
     $new_user['email'] = strtolower($_POST['email']);
     $new_user['password'] = password_hash($_POST['password'],PASSWORD_DEFAULT);
-    var_dump($new_user);
+
     //validation
     $user_exists = false;
     foreach ($users_db as $user) {
@@ -14,21 +14,18 @@ if (isset($_POST['submit'])) {
         if ($user->email == $new_user['email']) $user_exists = true;
     }
 
-    var_dump($user_exists);
-
     if ($user_exists) {
         header('Location: signup.php?error=user already exists');
     } else {
         $users_db[] = $new_user;
         $users_db = json_encode($users_db);
         file_put_contents('users.json', $users_db);
-        header('Location: signup.php?error=user added successfully');
+        header('Location: signin.php?msg=user added successfully');
     }
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,7 +37,6 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <div class="container page">
         <div class="row">
             <div class="col-sm-6 first_column">
                 <div class="content1">
@@ -55,25 +51,24 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
             <div class="col-sm-6 second_column">
+                <button class="loginrdr"> <a href="signin.php">Log in</a></button>
                 <form method="post" action="signup.php">
                     <div class="form-group">
-                        <h4>Create an account</h4>
-
+                        <h3>Create an account</h3>
                         <label for="exampleinputusername">Username</label>
                         <input name="name" type="text" class="form-control input-box" id="exampleinputusername" aria-describedby="textHelp" required />
                     </div>
-
                     <div class="form-group">
                         <label for="exampleinputemail">Email</label>
-                        <input name="email" type="email" class="form-control input-box" id="exampleinputemail" aria-describedby="textHelp" required />
+                        <input name="email" type="email" class="form-control input-box" id="exampleinputemail" aria-describedby="textHelp"  required />
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input name="password" type="password" class="form-control" id="exampleInputPassword1" required />
+                        <input name="password" type="password" class="form-control" id="exampleInputPassword1"  required />
                     </div>
                     <div class="form-group">
                         <label for="examplerepeatpassword">Repeat password</label>
-                        <input type="password" class="form-control" id="examplerepeatpassword" required />
+                        <input type="password" class="form-control" id="examplerepeatpassword"  required />
                     </div>
                     <div class="form-group">
                         <div class="text-center" style="color:#39a2e4d3;">
@@ -82,14 +77,12 @@ if (isset($_POST['submit'])) {
                             ?>
                         </div>
                     </div>
-                    <button type="submit" name="submit" class="btn btn-primary">Sign up</button>
-                    <div class="form-group text-center mt-3">
-                        <p>already have an account? <a href="signin.php">Log in</a></p>
-                    </div>
+                    <button name="submit" type="submit" class="btn btn-primary">Sign up</button>
+                    <button class="btn btn-primary"><a href="https://www.twitter.com">Sign up with your twitter account</a></button>
                 </form>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
+
