@@ -1,4 +1,4 @@
-            @import url("https://fonts.googleapis.com/css?family=Fugaz+One|Lato:400,700|Montserrat:400,700&display=swap");
+    @import url("https://fonts.googleapis.com/css?family=Fugaz+One|Lato:400,700|Montserrat:400,700&display=swap");
             * {
                 margin: 0;
                 padding: 0;
@@ -189,10 +189,40 @@
                 font-size: 14px;
                 line-height: 36px;
                 color: #0168A7;
-                margin-left: 40px;
+                margin-left: 20px;
             }
             
             @media screen and (max-width: 1100px) and (min-width: 240px) {
+              .landingheader {
+                font-family: Fugaz One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 27px;
+                line-height: 30px;
+                margin-top: 40px;
+                margin-bottom: 30px;
+                margin-left: 100px;
+            }
+            
+            .landingcnt {
+                position: absolute;
+                margin: 0% 0 25% 25%;
+                position: absolute;
+                background: #FFFFFF;
+                border-radius: 40px;
+                width: 50%;
+                height: 70%;
+                text-align: center;
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 29px;
+            }
+            
+            .mainlanding {
+                background: rgba(29, 161, 242, 0.4);
+                text-align: center;
                 .landingcnt {
                     position: absolute;
                     margin: 70% 0% 27.5% 27.5%;
