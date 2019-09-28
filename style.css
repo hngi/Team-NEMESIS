@@ -120,7 +120,6 @@ button a {
     font-size: 13px;
     line-height: 36px;
     margin-right: 115px;
-    top: 50px;
 }
 
 .signuprdr {
@@ -136,10 +135,13 @@ button a {
     font-size: 13px;
     line-height: 36px;
     margin-right: 115px;
-    top: 50px;
 }
-  
-.landingheader {
+
+.landingblock {
+    max-width: 45%; 
+}
+
+.landingblock, .landingheader {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -152,6 +154,7 @@ button a {
     -moz-box-pack: justify;
     -ms-flex-pack: justify;
     flex-wrap: wrap;
+    margin: 10px auto;
 }
 
 .landingheader h2 {
@@ -160,15 +163,12 @@ button a {
     font-weight: bold;
     font-size: 30px;
     line-height: 30px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    flex: 5;
+    flex: 2;
 }
                     
 .landingcnt {
     position: absolute;
-    margin: 0% 0% 27.5% 27.5%;
-    position: absolute;
+    margin: 70% 0% 27.5% 27.5%;
     background: #FFFFFF;
     border-radius: 30px;
     width: 45%;
@@ -194,10 +194,6 @@ button a {
     font-weight: bold;
     font-size: 24px;
     line-height: 40px;
-}
-
-.landingblock {
-    max-width: 60%; 
 }
 
 .landingheader .loginrdr {
@@ -234,8 +230,7 @@ button a {
 @media screen and (max-width: 1100px) and (min-width: 240px) {
     .landingcnt {
         position: absolute;
-        margin: 0% 0% 27.5% 27.5%;
-        position: absolute;
+        margin: 70% 0% 27.5% 27.5%;
         background: #FFFFFF;
         border-radius: 30px;
         width: 45%;
