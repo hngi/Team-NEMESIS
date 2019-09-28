@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Lato:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Fugaz+One|Lato:400,700|Montserrat:400,700&display=swap");
 * {
     margin: 0;
     padding: 0;
@@ -84,6 +84,7 @@ button {
     background: #39a2e4 !important;
     border-radius: 20px !important;
     margin-top: 0.9em !important;
+    white-space: nowrap;    
 }
 
 button:hover {
@@ -139,18 +140,34 @@ button a {
 }
   
 .landingheader {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-end;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    flex-wrap: wrap;
+}
+
+.landingheader h2 {
     font-family: Fugaz One;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-size: 30px;
     line-height: 30px;
     margin-top: 40px;
     margin-bottom: 20px;
+    flex: 5;
 }
                     
 .landingcnt {
     position: absolute;
-    margin: 0% 0% 25% 25%;
+    margin: 0% 0% 27.5% 27.5%;
     position: absolute;
     background: #FFFFFF;
     border-radius: 30px;
@@ -163,56 +180,61 @@ button a {
     font-size: 14px;
     line-height: 29px;
 }
-                    
+
 .mainlanding {
     background: rgba(29, 161, 242, 0.4);
     text-align: center;
 }
                     
-.word p {
+.landingcnt h2 {
     color: #0168A7;
     margin: 10px;
-    font-family: Lato;
+    font-family: Montserrat, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 40px;
 }
 
-.landing-signup .loginrdr {
-    background: #FFFFFF !important;
-    border: 2px solid #1B95E0 !important;
-    box-sizing: border-box !important;
-    border-radius: 20px !important;
-    width: 80px;
-    float: right;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 36px;
-    margin-left: 10px;
-
+.landingblock {
+    max-width: 60%; 
 }
 
-.landing-signup .signuprdr {
+.landingheader .loginrdr {
     background: #FFFFFF !important;
     border: 2px solid #1B95E0 !important;
     box-sizing: border-box !important;
     border-radius: 20px !important;
     width: 80px;
-    float: right;
     font-family: Lato;
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
     line-height: 36px;
+    margin-left: 80px;
+    flex: 1;
+    display: inline-block;
+}
+
+.landingheader .signuprdr {
+    background: #FFFFFF !important;
+    border: 2px solid #1B95E0 !important;
+    box-sizing: border-box !important;
+    border-radius: 20px !important;
+    width: 80px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 36px;
+    flex: 1;
+    display: inline-block;
 }
                     
 @media screen and (max-width: 1100px) and (min-width: 240px) {
     .landingcnt {
         position: absolute;
-        margin: 0% 0% 25% 25%;
+        margin: 0% 0% 27.5% 27.5%;
         position: absolute;
         background: #FFFFFF;
         border-radius: 30px;
@@ -231,18 +253,16 @@ button a {
         text-align: center;
     }
                         
-    .word p {
+    .landingcnt h2 {
         color: #0168A7;
         margin: 10px;
-        font-family: Lato;
+        font-family: Montserrat, sans-serif;
         font-style: normal;
         font-weight: bold;
         font-size: 24px;
         line-height: 40px;
     }
 }
-
-/*styles for desktop view*/
 
 @media(min-width: 999px) {
     form { 
