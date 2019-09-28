@@ -2,6 +2,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
+const ejs = require('ejs');
 const session = require('express-session');
 const passport = require('passport');
 const passportLocalMongoose = require('passport-local-mongoose');
@@ -10,6 +11,8 @@ const bodyParser = require('body-parser');
 const app = express();
 
 app.use(express.static("assets"));
+app.set('view engine', 'ejs');
+
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(session({
   secret: 'edffdfdfdfdf',
@@ -50,20 +53,23 @@ passport.deserializeUser(function(id, done) {
 });
 
 app.get("/", function(req, res){
-  res.sendFile(__dirname + "/index.html");
+  res.render("index");
 });
 app.get("/signIn", function(req, res){
-  res.sendFile(__dirname + "/signin.html");
+  res.render("signin");
 });
 app.get("/signUp", function(req, res){
-  res.sendFile(__dirname + "/signup.html");
+  res.render("signup", {
+    data: {},
+    errors: {}
+  });
 });
-app.get("/welcome", function(req,res){
+app.get("/networth", function(req,res){
   if(req.isAuthenticated()){
-    res.sendFile(__dirname + "/networth.html");
+    res.render("networth");
   }
   else{
-    res.redirect("/login");
+    res.redirect("signin");
   }
 });
 
@@ -76,12 +82,19 @@ app.post("/signUp", function(req, res){
 User.register({username: req.body.username}, req.body.password, function(error, user){
   if(error){
     console.log(error);
+    res.render("signup",{
+      data: req.body,
+      errors:{
+        message:{
+          msg: 'Message'
+        }
+      }
+    });
 
-    res.redirect("/");
   }
   else{
     passport.authenticate("local")(req, res, function(){
-      res.sendFile(__dirname + "/networth.html");
+      res.render("networth");
     });
   }
 } );
@@ -101,7 +114,7 @@ req.login(user, function(error){
   }
   else{
     passport.authenticate("local")(req,res,function(){
-      res.sendFile(__dirname + "/networth.html");
+      res.render("networth");
     });
   }
 });
@@ -119,8 +132,8 @@ app.listen(process.env.PORT || 3000, function(){
 function validate() {
   var username = document.getElementById("email").value;
   var password = document.getElementById("password").value;
-  
-   
+
+
   if (username == null || username == "") {
       alert("Please enter the username.");
       return false;
@@ -129,25 +142,24 @@ function validate() {
       alert("Please enter the password.");
       return false;
   }
-  
-  /* 
-  
+
+  /*
+
   for(i = 0; i < user.length;i++)
   { if(username == user[i].username && password == user[i].password) {
       alert('Login successful : Welcome' + ' ' + username)
      return;
-  } 
+  }
   }
 
   for(n = 0; n < user.length;n++)
   {if (username !== user[n].username){
       alert("Username does not exist");
-  return false;} 
-  
+  return false;}
+
     else if (password !== user[n].password){
           alert("Incorrect password");
-      return false;} 
+      return false;}
     }
   */
 }
-
