@@ -12,6 +12,7 @@ if (isset($_GET['logout'])) {
   $_SESSION = [];
   session_destroy();
   header('Location: signin.php');
+  exit();
 }
 
 $model = new Model();
