@@ -1,4 +1,13 @@
 <?php
+require_once 'Utility.php';
+session_start();
+console_log($_SESSION);
+
+if (isset($_SESSION['logged_in'])) {
+    header('Location: dashboard.php');
+}
+
+
 if (isset($_POST['submit'])) {
     $file_content = file_get_contents('users.json');
     $users_db = [];

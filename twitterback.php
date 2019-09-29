@@ -25,21 +25,28 @@ if ($_GET['oauth_token'] || $_GET['oauth_verifier']) {
         $text = $user_info->status->text;
         $username = $user_info->screen_name;
 
-        $filename = 'db/' . $user_id . '.json';
+        $filename = 'db/' . $username . '.json';
         if (file_exists($filename)) {
-            echo 'old user';
+            $_SESSION['name'] = $user_name;
+            $_SESSION['dp'] = $user_pic;
+            $_SESSION['text'] = $text;
+            $_SESSION['username'] = $username;
+            $_SESSION['logged_in'] = true;
         } else {
-            echo 'new user';
-            fopen($filename, 'w');
+            $file = fopen($filename, 'w');
+            // fwrite($file, '[]');
+            $_SESSION['name'] = $user_name;
+            $_SESSION['dp'] = $user_pic;
+            $_SESSION['text'] = $text;
+            $_SESSION['username'] = $username;
+            $_SESSION['logged_in'] = true;
         }
-        $_SESSION['name'] = $user_name;
-        $_SESSION['dp'] = $user_pic;
-        $_SESSION['text'] = $text;
-        $_SESSION['username'] = $username;
-
-        console_log($user_info);
+        // console_log($user_info);
+        header('Location: dashboard.php');
+        // echo "done";
     } catch (Exception $e) {
-        echo "THERE IS AN ERROR ";
+        header('Location: signin.php?msg=twitter sign in error');
+        // echo "ERROR: " . $e->getMessage();
     }
 }
 

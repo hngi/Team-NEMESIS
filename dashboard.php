@@ -1,4 +1,9 @@
 <?php
+require_once 'Utility.php';
+require_once 'TwitterAPIExchange.php';
+require_once 'config.php';
+require_once 'Model.php';
+
 session_start();
 if (!isset($_SESSION['logged_in'])) {
   header('Location: signin.php');
@@ -8,6 +13,10 @@ if (isset($_GET['logout'])) {
   session_destroy();
   header('Location: signin.php');
 }
+
+$model = new Model();
+$model->store_tweets();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,26 +37,45 @@ if (isset($_GET['logout'])) {
   <div class="container">
     <div class="row">
       <div class="col-sm-4 ">
-        <p>Team Nemesis</p>
-        <button class="btn-block"><i class="fab fa-google"></i></button>
-        <p>User Profile</p>
-      </div>
-      <div class="col-sm-8">
-        <div class="card">
-          <div class="card-body">
-            Saved TweetA
-          </div>
+        <p><?php echo $_SESSION['name']; ?></p>
+        <!-- <button class="btn-block"><i class="fab fa-google"></i></button> -->
+        <div class="img-responsive">
+          <img class="img-thumbnail" src="<?php echo $_SESSION['dp']; ?>" alt="" srcset="">
         </div>
-        <div class="card text-center">
+        <p><?php echo $_SESSION['username']; ?></p>
+      </div>
+
+      <div class="col-sm-8">
+
+        <?php
+        $size = 3;
+        $filename = 'db/' . $_SESSION['username'] . '.json';
+        $file_content = file_get_contents($filename);
+        $tweet_db = json_decode($file_content);
+        $sliced_tweets = array_slice($tweet_db, 0, $size);
+        foreach ($sliced_tweets as $tweet) {
+          console_log($tweet);
+          $html = '<div class="card text-center">
+                  <div class="card-body">' .
+            $tweet->text
+            . '</div>
+                  </div>';
+          echo $html;
+        }
+        ?>
+
+        <!-- <div class="card text-center">
           <div class="card-body">
             Saved TweetB
           </div>
-        </div>
-        <div class="card text-center">
+        </div> -->
+
+        <!-- <div class="card text-center">
           <div class="card-body">
             Saved TweetC
           </div>
-        </div>
+        </div> -->
+
       </div>
     </div>
   </div>
