@@ -26,7 +26,7 @@ class Model
 
         $username = $_SESSION['username'];
         $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-        $getfield = '?screen_name=' . $username . '&count=10';
+        $getfield = '?screen_name=' . $username . '&count=12';
         $requestMethod = 'GET';
 
         $twitter = new TwitterAPIExchange($settings);
@@ -34,10 +34,15 @@ class Model
         $twitter->buildOauth($url, $requestMethod);
         $result = $twitter->performRequest();
         $result = json_decode($result);
-        // console_log($result);
+        console_log($result);
 
         $tweets_db = json_decode(file_get_contents($filename));
-        // console_log($tweets_db);
+
+        if ($tweets_db === null) {
+            $tweets_db = $result;
+        }
+
+        console_log($tweets_db);
 
         foreach ($result as $tweet) {
             $tweet_exists = false;
