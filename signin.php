@@ -72,6 +72,7 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
                 <button name="submit" type="submit" class="btn btn-primary">Log in</button>
+                <button class="btn btn-primary"><a href="api.php">Log in with your twitter account</a></button>
             </form>
         </div>
     </div>
