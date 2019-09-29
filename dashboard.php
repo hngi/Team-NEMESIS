@@ -18,6 +18,7 @@ if (isset($_GET['logout'])) {
 $model = new Model();
 $model->store_tweets();
 
+console_log($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -53,6 +54,7 @@ $model->store_tweets();
         $filename = 'db/' . $_SESSION['username'] . '.json';
         $file_content = file_get_contents($filename);
         $tweet_db = json_decode($file_content);
+
         $sliced_tweets = array_slice($tweet_db, 0, $size);
         foreach ($sliced_tweets as $tweet) {
           console_log($tweet);
