@@ -54,7 +54,7 @@ console_log($_SESSION);
         $filename = 'db/' . $_SESSION['username'] . '.json';
         $file_content = file_get_contents($filename);
         $tweet_db = json_decode($file_content);
-
+        console_log("tweets_db", $tweet_db);
         $sliced_tweets = array_slice($tweet_db, 0, $size);
         foreach ($sliced_tweets as $tweet) {
           console_log($tweet);

@@ -42,7 +42,7 @@ class Model
             $tweets_db = $result;
         }
 
-        console_log($tweets_db);
+        console_log("in the model ", $tweets_db);
 
         foreach ($result as $tweet) {
             $tweet_exists = false;
