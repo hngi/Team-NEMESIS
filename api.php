@@ -19,6 +19,6 @@ try {
     header('Location: ' . $url);
 } catch (Exception $e) {
     // console_log($e);
-    echo $e;
-    // header('Location: signin.php?msg=twitter sign in error');
+    // echo $e;
+    header('Location: signin.php?msg=twitter sign in error');
 }
