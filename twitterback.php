@@ -33,7 +33,7 @@ if ($_GET['oauth_token'] || $_GET['oauth_verifier']) {
             $_SESSION['username'] = $username;
             $_SESSION['logged_in'] = true;
         } else {
-            $file = fopen($filename, 'w');
+            $file = file_put_contents($filename, '');
             // fwrite($file, '[]');
             $_SESSION['name'] = $user_name;
             $_SESSION['dp'] = $user_pic;

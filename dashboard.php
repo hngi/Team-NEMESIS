@@ -52,11 +52,15 @@ console_log($_SESSION);
         <?php
         $size = 3;
         $filename = 'db/' . $_SESSION['username'] . '.json';
-        $file_content = file_get_contents($filename);
-        $tweet_db = json_decode($file_content);
-        console_log("tweets_db", $tweet_db);
-        $sliced_tweets = array_slice($tweet_db, 0, $size);
-        console_log("sliced tweets", $sliced_tweets);
+        if (file_exists($filename)) {
+          $file_content = file_get_contents($filename);
+          $tweet_db = json_decode($file_content);
+          console_log("tweets_db", $tweet_db);
+          $sliced_tweets = array_slice($tweet_db, 0, $size);
+          console_log("sliced tweets", $sliced_tweets);
+        } else {
+          console_log("file does not exist");
+        }
         foreach ($sliced_tweets as $tweet) {
           console_log($tweet);
           $html = '<div class="card text-center">
