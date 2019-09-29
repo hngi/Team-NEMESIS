@@ -16,5 +16,6 @@ try {
     $url = $connection->url("oauth/authorize", array("oauth_token" => $request_token['oauth_token']));
     header('Location: ' . $url);
 } catch (Exception $e) {
-    header('Location: signin.php?msg=twitter sign in error');
+    echo $e;
+    // header('Location: signin.php?msg=twitter sign in error');
 }
