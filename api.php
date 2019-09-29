@@ -11,8 +11,8 @@ use Abraham\TwitterOAuth\TwitterOAuth;
 try {
     session_start();
     $connection = new TwitterOAuth($twitter_api_key, $twitter_api_secret_key);
-    // $request_token = $connection->oauth("oauth/request_token", array("oauth_callback" => "http://localhost:8000/twitterback.php"));
-    $request_token = $connection->oauth("oauth/request_token", array("oauth_callback" => "https://nemesis-twitterbot.herokuapp.com/twitterback.php"));
+    $request_token = $connection->oauth("oauth/request_token", array("oauth_callback" => "http://localhost:8000/twitterback.php"));
+    // $request_token = $connection->oauth("oauth/request_token", array("oauth_callback" => "https://nemesis-twitterbot.herokuapp.com/twitterback.php"));
     $_SESSION['oauth_token'] = $request_token['oauth_token'];
     $_SESSION['oauth_token_secret'] = $request_token['oauth_token_secret'];
     $url = $connection->url("oauth/authorize", array("oauth_token" => $request_token['oauth_token']));
