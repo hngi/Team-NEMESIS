@@ -1,11 +1,11 @@
 <?php
 session_start();
+require_once 'Utility.php';
+require_once 'config.php';
+require "vendor/autoload.php";
 
 use Abraham\TwitterOAuth\TwitterOAuth;
 
-require_once 'Utility.php';
-require_once 'twitteroauth/autoload.php';
-require_once 'config.php';
 echo "started";
 if ($_GET['oauth_token'] || $_GET['oauth_verifier']) {
 
