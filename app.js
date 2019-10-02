@@ -60,7 +60,7 @@ passport.deserializeUser(function(id, done) {
 passport.use(new GoogleStrategy({
     clientID: "416966108961-47aquirbbei7vr5hnv47ub5aordtu6pm.apps.googleusercontent.com",
     clientSecret: "NcrEPdRRZPxV7bSANVwec2uW",
-    callbackURL: "http://localhost:3000/auth/google/networth",
+    callbackURL: "https://nemesis-net.herokuapp.com/auth/google/networth",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
