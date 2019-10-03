@@ -140,10 +140,19 @@
                 font-weight: normal;
                 font-size: 27px;
                 line-height: 30px;
-                margin-top: 40px;
+                /* margin-top: 40px; */
                 margin-bottom: 30px;
-                margin-left: 230px;
+                /* margin-left: 230px; */
+                background: #0168A7;
+                color: white;
+                padding: 15px;
+                /* clear: both; */
             }
+            .landingheader h2 {
+                color: #FFFFFF;
+                
+            }
+
             
             .landingcnt {
                 position: absolute;
@@ -263,4 +272,24 @@
             
             .input-box {
                 width: 100%;
+            }
+
+            .about-us {
+                /* margin-top: 30px; */
+            }
+            .about-us h1, h2 {
+                color: #0168A7;
+            }
+        
+            .nav-options {
+                text-align: right; 
+            }
+            .logo {
+                float: left;
+                margin-left: 200px;
+            }
+            #logo {
+                /* float: left; */
+                margin-left: 200px;
+                color: #FFFFFF;
             }
