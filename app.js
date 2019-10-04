@@ -1,5 +1,6 @@
 //jshint esversion:6
 require('dotenv').config();
+const aws = require('aws-sdk');
 const express = require('express');
 const mongoose = require('mongoose');
 const ejs = require('ejs');
@@ -7,6 +8,10 @@ const session = require('express-session');
 const passport = require('passport');
 const passportLocalMongoose = require('passport-local-mongoose');
 const bodyParser = require('body-parser');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const findOrCreate = require('mongoose-findorcreate');
+
+
 
 const app = express();
 
@@ -15,7 +20,7 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(session({
-  secret: 'edffdfdfdfdf',
+  secret: process.env.SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: { secure: true }
@@ -31,11 +36,12 @@ const userSchema = new mongoose.Schema(
   {
     name: String,
     email: String,
-    password: String
+    password: String,
+    googleId: String
   }) ;
 
 userSchema.plugin(passportLocalMongoose);
-// userSchema.plugin(findOrCreate);
+userSchema.plugin(findOrCreate);
 
 // Using userSchema to create a mongoose model with collection named User
 const User = new mongoose.model("User", userSchema);
@@ -52,9 +58,41 @@ passport.deserializeUser(function(id, done) {
   });
 });
 
+passport.use(new GoogleStrategy({
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
+    callbackURL: "https://nemesis-net.herokuapp.com/auth/google/networth",
+    userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
+  },
+  function(accessToken, refreshToken, profile, cb) {
+    console.log(profile);
+   User.findOne({googleId:profile.id, username:profile.displayName}, function(err,existingUser){
+      console.log(profile);
+      if(existingUser){
+        return cb(err,existingUser);
+      } else{
+        const newUser = new User({
+          googleId: profile.id,
+          username:profile.displayName
+        });
+        newUser.save(function(err){
+          return cb(err,newUser);
+        });
+      }
+    });
+  }
+));
+
 app.get("/", function(req, res){
   res.render("index");
 });
+app.get("/auth/google",passport.authenticate("google", {scope: ["profile"]}));
+app.get("/auth/google/networth",
+  passport.authenticate("google", { failureRedirect: '/signIn' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/networth1');
+  });
 app.get("/signIn", function(req, res){
   res.render("signin");
 });
@@ -63,6 +101,9 @@ app.get("/signUp", function(req, res){
     data: {},
     errors: {}
   });
+});
+app.get("/networth1", function(req,res){
+  res.render("networth");
 });
 app.get("/networth", function(req,res){
   if(req.isAuthenticated()){
