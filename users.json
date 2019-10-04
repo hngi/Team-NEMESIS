@@ -3,5 +3,14 @@
         "name": "admin",
         "email": "admin@admin.com",
         "password": "$2y$10$KEPbOqrVQalfL9Xz6uACYeqZX7.bB0AuvLFXaMdQAaujm5MTE0MYe"
+    },
+    {
+        "name": "sphinx",
+        "email": "ojinakatochukwu@gmail.com",
+        "password": "$2y$10$YON1GXHsxWuwIelPE8Y5hehStIMjWJPgVbHiwwEMz1HoScYhLfiu.",
+        "dp": "",
+        "text": "",
+        "username": "",
+        "logged_in": ""
     }
 ]
