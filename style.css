@@ -25,19 +25,19 @@
             }
             
             input[type="text"] {
-                width: 450px;
+                /* width: 450px; */
                 border: 2px solid #1B95E0;
                 border-radius: 10px;
             }
             
             input[type="email"] {
-                width: 450px;
+                /* width: 450px; */
                 border: 2px solid #1b95e0;
                 border-radius: 10px;
             }
             
             input[type="password"] {
-                width: 450px;
+                /* width: 450px; */
                 border: 2px solid #1b95e0;
                 border-radius: 10px;
             }
@@ -63,7 +63,13 @@
                 font-weight: 700;
                 margin-bottom: 1.4em !important;
             }
-            
+            span {
+                display: flex;
+                margin-top: 2em !important;
+            }
+            span p {
+                width: 60%;
+            }
             .first-paragraph {
                 font-size: 45px;
                 font-family: "Fugaz One", cursive;
@@ -71,27 +77,28 @@
                 line-height: 66px;
                 color: #000;
             }
-            
+            a {
+                color: white !important;
+            }
             h3 {
                 text-align: center;
                 font-weight: 700 !important;
                 font-size: 18px;
                 line-height: 48px;
             }
-            
-            button {
-                width: 450px;
-                background: #39a2e4 !important;
-                border-radius: 20px !important;
-                margin-top: 0.9em !important;
-                white-space: nowrap;
-                color: #0168A7
-            }
-            
             button:hover {
                 background: #39a2e4d3 !important;
             }
-            
+            .btn-primary {
+                background: #39a2e4 !important;
+                border-radius: 10px !important;              
+                white-space: nowrap;
+                line-height: -5px;
+                height: 40px;
+            }
+            button[type="submit"] {
+                margin-top: 2em !important;
+            }
             .loginrdr a {
                 color: #1b94e0;
                 text-decoration: none;
@@ -261,6 +268,6 @@
                 }
             }
             
-            .input-box {
+            /* .input-box {
                 width: 100%;
-            }
+            } */
