@@ -17,11 +17,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nemesis Twitter Bot Landing Page</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet"> -->
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
     <style>
         @import url("https://fonts.googleapis.com/css?family=Fugaz+One|Lato:400,700|Montserrat:400,700&display=swap");
@@ -96,7 +96,7 @@
                                 <v-btn @click="gotoSignupWithTwitter" min-width="300px" color="#39a2e4" dark>Sign in with twitter</v-btn>
                             </v-row>
                             <v-row class="d-flex flex-row justify-center mt-3">
-                                <div class="ma-2">don't have an account?</div>
+                                <div class="ma-2 mt-4" style="font-size:13px;color:#848d94;">don't have an account?</div>
                                 <v-btn @click="gotoRegister" class="ma-2" color="#39a2e4" dark>Sign up</v-btn>
                             </v-row>
                         </v-container>
@@ -109,8 +109,8 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.js"></script>
     <script>
         var app = new Vue({
             el: '#app',
