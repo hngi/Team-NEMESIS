@@ -87,7 +87,7 @@
                         <v-container>
                             <v-form ref="login">
                                 <v-text-field name="username" v-model="username" :rules="usernameRules" outlined color="blue" label="Username" placeholder="enter your username" count="10"></v-text-field>
-                                <v-text-field :rules="passwordRules" v-model="password" outlined label="Password" placeholder="enter your Password" color="blue" count="10"></v-text-field>
+                                <v-text-field :rules="passwordRules" type="password" v-model="password" outlined label="Password" placeholder="enter your Password" color="blue" count="10"></v-text-field>
                                 <v-row class="d-flex flex-row justify-center">
                                     <v-btn @click="submit" color="#39a2e4" dark min-width="300px">Log in</v-btn>
                                 </v-row>
