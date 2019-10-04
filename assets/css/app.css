@@ -10,6 +10,7 @@
   --dark: #333333;
   --black: #000000;
 }
+
 /*  LOGO  */
  #logo{
     position: relative;
@@ -202,4 +203,8 @@ nav .button {
   .assets-section {
     border: none;
   }
+}
+.or-text{
+  color: var(--gray);
+  text-align: center;
 }
