@@ -140,12 +140,14 @@
                 font-weight: normal;
                 font-size: 27px;
                 line-height: 30px;
-                /* margin-top: 40px; */
-                margin-bottom: 30px;
-                /* margin-left: 230px; */
+                width: 100%;
                 background: #0168A7;
                 color: white;
-                padding: 15px;
+                padding: 15px !important;
+                /* margin-top: 40px; */
+                /* margin-bottom: 30px; */
+                /* margin-left: 230px; */ 
+                
                 /* clear: both; */
             }
             .landingheader h2 {
@@ -156,7 +158,7 @@
             
             .landingcnt {
                 position: absolute;
-                margin: 0% 0 25% 25%;
+                margin: 2% 0 2% 25%;
                 position: absolute;
                 background: #FFFFFF;
                 border-radius: 40px;
@@ -224,21 +226,24 @@
                     font-weight: normal;
                     font-size: 27px;
                     line-height: 30px;
-                    margin-top: 40px;
-                    margin-bottom: 15px;
-                    margin-left: 60px;
+                    text-align: center;
+                    /* margin-top: 40px; */
+                    /* margin-bottom: 15px; */
+                    /* margin-left: 60px; */
                 }
+                
                 .mainlanding {
                     background: rgba(29, 161, 242, 0.4);
                     text-align: center;
                 }
                 .landingcnt {
                     position: absolute;
-                    margin: 10% 0% 27.5% 27.5%;
+                    margin: 2% 0% 2% 20.5%;
+                    padding: 5%;
                     background: #FFFFFF;
                     border-radius: 30px;
-                    width: 45%;
-                    height: 75%;
+                    width: 65%;
+                    height: 80%;
                     text-align: center;
                     font-family: Lato;
                     font-style: normal;
@@ -274,8 +279,8 @@
                 width: 100%;
             }
 
-            .about-us {
-                /* margin-top: 30px; */
+            .about-us h1{
+                font-family: Fugaz One;
             }
             .about-us h1, h2 {
                 color: #0168A7;
@@ -283,11 +288,12 @@
         
             .nav-options {
                 text-align: right; 
+                padding-right: 15px;
             }
-            .logo {
+            /* .logo {
                 float: left;
                 margin-left: 200px;
-            }
+            } */
             #logo {
                 /* float: left; */
                 margin-left: 200px;
