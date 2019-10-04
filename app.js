@@ -65,8 +65,19 @@ passport.use(new GoogleStrategy({
   },
   function(accessToken, refreshToken, profile, cb) {
     console.log(profile);
-    User.findOrCreate({ googleId: profile.id }, function (err, user) {
-      return cb(err, user);
+   User.findOne({googleId:profile.id, username:profile.displayName}, function(err,existingUser){
+      console.log(profile);
+      if(existingUser){
+        return cb(err,existingUser);
+      } else{
+        const newUser = new User({
+          googleId: profile.id,
+          username:profile.displayName
+        });
+        newUser.save(function(err){
+          return cb(err,newUser);
+        });
+      }
     });
   }
 ));
