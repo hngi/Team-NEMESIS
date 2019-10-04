@@ -24,12 +24,12 @@ foreach ($users_db as $user) {
     if ($user->email == $new_user['email']) $user_exists = true;
 }
 if ($user_exists) {
-    $data['error'] = "user exists";
+    $data['msg'] = "user exists";
     echo json_encode($data);
 } else {
     $users_db[] = $new_user;
     $users_db = json_encode($users_db);
     file_put_contents('users.json', $users_db);
-    $data['error'] = false;
+    $data['msg'] = "user registered successful";
     echo json_encode($data);
 }

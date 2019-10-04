@@ -83,6 +83,7 @@
                                     <v-text-field :rules="emailRules" v-model="email" name="email" type="email" outlined color="blue" label="Email" placeholder="enter your email address" count="10" required></v-text-field>
                                     <v-text-field :rules="passwordRules" v-model="password" name="password" type="password" outlined label="Password" placeholder="enter your Password" color="blue" count="10" required></v-text-field>
                                     <!-- <v-text-field ref="confirm" :rules="confirmPasswordRules" v-model="confirmPassword" type="password" outlined label="Confirm Password" placeholder="enter your Password again" color="blue" count="10" required></v-text-field> -->
+                                    <p class="text-center" style="font-size:13px;color:#848d94;">{{msg}}</p>
                                     <v-row class="d-flex flex-row justify-center">
                                         <v-btn :loading="loading" @click="registerUser" name="submit" color="#39a2e4" dark min-width="300px">Create Account</v-btn>
                                     </v-row>
@@ -113,6 +114,7 @@
             el: '#app',
             vuetify: new Vuetify(),
             data: {
+                msg: "",
                 loading: false,
                 username: "",
                 email: "",
@@ -152,12 +154,14 @@
                             },
                             dataType: "json",
                             success: function(response) {
-                                console.log(response);
+                                console.log(app);
+                                app.msg = response.msg;
                             },
                             error: function(xhr, err) {
-                                console.log(xhr);\
+                                console.log(xhr);
                             },
                         });
+                        this.loading = false;
 
                     }
                 },

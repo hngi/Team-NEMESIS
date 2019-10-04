@@ -85,15 +85,15 @@
                     <v-card class="d-flex pa-8 flex-column justify-center align-center pa-3" min-width="400px">
                         <v-card-title class="text-center">Welcome</v-card-title>
                         <v-container>
-                            <v-form action="hello.php">
-                                <v-text-field outlined color="blue" label="Username" placeholder="enter your username" count="10"></v-text-field>
-                                <v-text-field outlined label="Password" placeholder="enter your Password" color="blue" count="10"></v-text-field>
+                            <v-form ref="login">
+                                <v-text-field name="username" v-model="username" :rules="usernameRules" outlined color="blue" label="Username" placeholder="enter your username" count="10"></v-text-field>
+                                <v-text-field :rules="passwordRules" v-model="password" outlined label="Password" placeholder="enter your Password" color="blue" count="10"></v-text-field>
                                 <v-row class="d-flex flex-row justify-center">
-                                    <v-btn type="submit" color="#39a2e4" dark min-width="300px">Log in</v-btn>
+                                    <v-btn @click="submit" color="#39a2e4" dark min-width="300px">Log in</v-btn>
                                 </v-row>
                             </v-form>
                             <v-row class="d-flex flex-row justify-center mt-3">
-                                <v-btn min-width="300px" color="#39a2e4" dark>Sign in with twitter</v-btn>
+                                <v-btn @click="gotoSignupWithTwitter" min-width="300px" color="#39a2e4" dark>Sign in with twitter</v-btn>
                             </v-row>
                             <v-row class="d-flex flex-row justify-center mt-3">
                                 <div class="ma-2">don't have an account?</div>
@@ -117,10 +117,33 @@
             vuetify: new Vuetify(),
             data: {
                 msg: "hello",
+                username: "",
+                email: "",
+                password: "",
+                usernameRules: [
+                    v => v.length >= 5 || 'Minimum lenght is 5',
+                    v => !(/[\s]+/.test(v)) || 'no whitespace allowed',
+                ],
+                // emailRules: [
+                //     v => /^([\w\d\.]+)@([\w]{2,6})\.([\w]{2,5})(\.[\w]{2,4})?$/g.test(v) || 'must be a valid email address'
+                // ],
+                passwordRules: [
+                    v => /[a-z]+/.test(v) || "must contain lowercase alphabets",
+                    v => /[A-Z]+/.test(v) || "must contain uppercase alphabets",
+                    v => /[\d]+/.test(v) || "must contain numbers",
+                ],
             },
             methods: {
                 gotoRegister: function() {
                     window.location.href = "register.php";
+                },
+                gotoSignupWithTwitter: function() {
+                    window.location.href = "api.php";
+                },
+                submit: function() {
+                    if (this.$refs.login.validate()) {
+                        this.gotoSignupWithTwitter();
+                    }
                 },
             },
             computed: {
