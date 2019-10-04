@@ -1,0 +1,174 @@
+:root {
+  /* Colors */
+  --primary: #5c17b2;
+  --light-primary: #7920e6;
+  --white: #ffffff;
+  --off-white: #eeeeee;
+  --light-gray: #dee2e6;
+  --gray: #716f74;
+  --dark: #333333;
+  --black: #000000;
+}
+body,html{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+/* NAVBAR */
+.navbar{
+	padding-right: 20px;
+	padding-left: 20px;
+	background: #fff;
+	border: none;
+}
+.navbar-header h1, .navbar-header img, .navbar-header a,
+.navbar-default .navbar-nav li a{	
+	position: relative;
+}
+.navbar-header h1{
+	left: 20px;
+	font-size: 23.5px;
+	text-transform: uppercase;
+}
+.navbar-header img{
+	bottom: 7px;
+}
+.navbar-header a{
+	bottom: 2px;	
+	font-weight: 500;
+	line-height: 1.2;
+	color: #5c17b2;
+}
+.navbar-header a:focus{
+	text-decoration: none;
+}
+.navbar-default .navbar-nav li a {
+	right: 20px;
+  color: #5c17b2;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-default .navbar-nav li a:hover {
+  color: var(--light-primary);
+}
+/* MAIN */
+.container-fluid{
+	padding-right: 0;
+	padding-left: 0;
+}
+.jumbotron-top {
+	margin-bottom: 0;
+	padding-top: 150px;
+	padding-bottom: 100px;
+	color: #eee;
+	background: linear-gradient(to bottom, #6600cc 0%, #9900cc 100%);
+}
+
+
+
+.panel{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	background: #fff;
+}
+.panel-links{
+	margin-left: 35px;
+}
+.panel-links a{	
+	color: #5c17b2;
+	line-height: 40px;
+}
+
+.navbar a:hover, .panel a:hover, .container a:hover{
+	text-decoration: none;
+}
+.question h5{
+	color: #333;
+}
+
+.questions-wrapper{
+	padding: 15px;
+	margin-bottom: 2px;
+	border-bottom: 1px solid #dee2e6;
+}
+.questions-wrapper a{
+	color: #5c17b2;
+	font-size: 16px;
+}
+.questions-wrapper a:focus{
+	text-decoration: none;
+}
+.questions-wrapper div{
+	color: #333;
+}
+
+/* BOTTOM */
+.jumbotron-bottom{
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: absolute;
+	margin-bottom: 0;
+	background: #fff;
+	color:  #7920e6;
+}
+.icons li{
+	display: inline;
+	padding: 15px;
+}
+.fa-slack,.fa-twitter,.fa-google-drive,.fa-github,.fa-git,.fa-figma{
+	font-size: 18px;
+	color: linear-gradient(to bottom, #6600cc 0%, #9900cc 100%);
+}
+.jumbotron-bottom span{
+	font-size: 5px;
+	font-weight: lighter;
+	line-height:  20px;
+	letter-spacing: 1px;
+}
+
+@media (max-width: 550px){
+	body, html{
+		min-width: 550px;
+		height: 100%;
+	}
+	.navbar-header h1{
+		position: relative;
+		top: 10px;
+	}
+	.navbar-nav{
+		margin: 0;
+	}
+	.navbar-default .navbar-nav li a {
+		float: right;
+		position: relative;
+		bottom: 35px;
+	}
+	.jumbotron-bottom{
+		width: 100%;
+		margin-top: 200px;
+		position: absolute;
+		margin-bottom: 0
+	}
+	.icons .list-group, .icons span{
+		margin-left: 25px;
+	}
+}
+
+
+@media (min-width: 551px) and (max-width: 769px){
+	.navbar-header h1{
+		position: relative;
+		top: 10px;
+	}
+	.navbar-nav{
+		margin: 0;
+	}
+	.navbar-default .navbar-nav li a {
+		float: right;
+		position: relative;
+		bottom: 35px;
+	}
+}

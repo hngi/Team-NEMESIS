@@ -114,6 +114,9 @@ nav .button {
 .landing {
   margin-top: 5rem;
 }
+.landing-text h2{
+  color: var(--primary);
+}
 
 .result {
   border-radius: 0.125rem;
