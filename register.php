@@ -1,14 +1,3 @@
-<?php
-// if (!session_id()) {
-//     session_start();
-// }
-// if (isset($_SESSION['logged_in'])) {
-//     header('Location: dashboard.php');
-// }
-// header('Location: signin.php');
-var_dump($_POST);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -166,7 +155,7 @@ var_dump($_POST);
                                 console.log(response);
                             },
                             error: function(xhr, err) {
-                                console.log(xhr);
+                                console.log(xhr);\
                             },
                         });
 
