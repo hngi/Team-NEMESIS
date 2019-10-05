@@ -184,8 +184,8 @@ if( $validated == false){
                         const form = document.getElementById('processreset');
                         $.ajax({
                             type: "post",
-                            url: "http://localhost/Team-Nemesis-Task5/Team-NEMESIS/processreset.php",
-                            //url: "http://nemesis-twitterbot.herokuapp.com/processreset.php",
+                            //url: "http://localhost/Team-Nemesis-Task5/Team-NEMESIS/processreset.php",
+                            url: "http://nemesis-tweetbot.herokuapp.com/processreset.php",
                             data: { 
                                 "email": this.email,
                                 "password": this.password

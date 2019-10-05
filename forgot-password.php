@@ -147,8 +147,8 @@
                         const form = document.getElementById('processforgot');
                         $.ajax({
                             type: "post",
-                            url: "http://localhost/Team-Nemesis-Task5/Team-NEMESIS/processforgot.php",
-                            //url: "http://nemesis-twitterbot.herokuapp.com/processforgot.php",
+                           // url: "http://localhost/Team-Nemesis-Task5/Team-NEMESIS/processforgot.php",
+                            url: "http://nemesis-tweetbot.herokuapp.com/processforgot.php",
                             data: { 
                                 "email": this.email
                             },
