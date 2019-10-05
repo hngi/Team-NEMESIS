@@ -99,9 +99,14 @@
                             </v-form>
                             <v-row class="d-flex flex-row justify-center mt-3">
                                 <v-btn @click="gotoSignupWithTwitter" min-width="300px" color="#39a2e4" dark>Sign in with twitter</v-btn>
+                            </v-row> 
+                            <v-row class="d-flex flex-row justify-center mt-3" style="cursor:pointer">
+                                <div  @click="gotoForgot" class="ma-2 mt-4" style="font-size:13px;color:#848d94;">forgot your password?</div>
                             </v-row>
                             <v-row class="d-flex flex-row justify-center mt-3">
                                 <div class="ma-2 mt-4" style="font-size:13px;color:#848d94;">don't have an account?</div>
+                                <br/>
+                                
                                 <v-btn @click="gotoRegister" class="ma-2" color="#39a2e4" dark>Sign up</v-btn>
                             </v-row>
                         </v-container>
@@ -141,6 +146,9 @@
             methods: {
                 gotoRegister: function() {
                     window.location.href = "register.php";
+                },
+                gotoForgot: function() {
+                    window.location.href = "forgot-password.php";
                 },
                 gotoSignupWithTwitter: function() {
                     window.location.href = "api.php";

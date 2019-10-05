@@ -149,8 +149,8 @@
                         const form = document.getElementById('register');
                         $.ajax({
                             type: "post",
-                            // url: "http://localhost:8000/signup.php",
-                            url: "http://nemesis-twitterbot.herokuapp.com/signup.php",
+                            //url: "http://localhost/Team-Nemesis-Task5/Team-NEMESIS/signup.php",
+                            url: "//nemesis-twitterbot.herokuapp.com/signup.php",
                             data: {
                                 "name": this.username,
                                 "email": this.email,
