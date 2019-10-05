@@ -34,6 +34,13 @@
     <div id="app">
         <v-app>
             <!-- style="background-color: rgba(29, 161, 242, 0.4);"  -->
+            <v-app-bar dense max-height="50px">
+                <v-toolbar-title style="font-family: Fugaz One; font-size:26px" class="">Nemesis Tweetbot</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-btn @click.prevent="gotoLogin" href="signin.php" text class="ma-3">Login</v-btn>
+                <v-btn @click.prevent="gotoRegister" href="signin.php" text class="ma-3">Sign up</v-btn>
+                <v-btn @click.prevent="gotoAbout" href="about.php" text class=""> About Us</v-btn>
+            </v-app-bar>
             <v-row>
                 <v-col cols="12" xl="6" md="6" xs="12" sm="12" lg="6" style="background-color: rgba(29, 161, 242, 0.4);">
                     <v-container>
@@ -145,6 +152,9 @@
                 },
                 gotoSignupWithTwitter: function() {
                     window.location.href = "api.php";
+                },
+                gotoAbout: function() {
+                    window.location.href = "about.php";
                 },
                 submit: function() {
                     if (this.$refs.login.validate()) {

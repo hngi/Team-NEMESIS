@@ -32,40 +32,7 @@
     <div id="app">
         <v-app style="background-color: rgba(29, 161, 242, 0.4);">
         
-        <v-toolbar extended>
-
-<<<<<<< HEAD
-    <div class="landingheader">
-        <h2>
-            Nemesis Tweetbot
-        </h2>
-    </div>
-    
-    <div class="landingcnt">
-        <div class="align">
-            <div class="word">
-                <h3>
-                    Enjoy your newsfeed
-                </h3>
-                <h3>
-                    in three simple steps:
-                </h3>
-            </div>
-            <img class="grow" src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1569341619/Team%20Nemesis_twitterBot/wifi_icon_mjyfgk.svg" alt="wifi icon" />
-            <h3>
-                Connect twitter account
-            </h3>
-            <img class="grow" src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1569341614/Team%20Nemesis_twitterBot/download_icon_njf4hm.svg" alt="download icon" />
-            <h3>
-                Save Tweet directly from twitter to external drive
-            </h3>
-            <img class="grow" src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1569341616/Team%20Nemesis_twitterBot/file_icon_a8sddq.svg" alt="file icon" />
-            <h3>
-                Enjoy viewing favorite tweet on external drive at leisure
-            </h3>
-        </div>
-=======
-        <!-- <v-toolbar-title>Title</v-toolbar-title> -->
+        <!-- <v-toolbar extended>
 
             <v-container class="display-3 text-center">
                 <div style="font-family: Fugaz One;">Nemesis Tweetbot</div>
@@ -78,7 +45,7 @@
 
 
 
-        </v-toolbar>
+        </v-toolbar> -->
 
             <!-- <v-container class="display-3 text-center">
                 <div style="font-family: Fugaz One;">Nemesis Tweetbot</div>
@@ -88,6 +55,13 @@
                 <v-btn @click.prevent="gotoRegister" href="signup.php" outlined color="blue" style="background-color: white;  border-radius: 20px;">Sign up</v-btn>
             </v-container> -->
         
+            <v-app-bar dense max-height="50px">
+                <v-toolbar-title style="font-family: Fugaz One; font-size:26px" class="">Nemesis Tweetbot</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-btn @click.prevent="gotoLogin" href="signin.php" text class="ma-3">Login</v-btn>
+                <v-btn @click.prevent="gotoRegister" href="signin.php" text class="ma-3">Sign up</v-btn>
+                <v-btn @click.prevent="gotoAbout" href="about.php" text class=""> About Us</v-btn>
+            </v-app-bar>
 
             <v-container min-width="500px">
                 <v-card class="mx-auto pa-6" max-width="500px" style="border-radius: 10px;">
@@ -105,7 +79,6 @@
                             <div>connect twitter account</div>
                         </v-col>
                     </v-row>
->>>>>>> master
 
                     <v-row class="">
                         <v-col class="d-flex flex-row justify-center">
