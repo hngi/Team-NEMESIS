@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const ejs = require('ejs');
 const session = require('express-session');
 const passport = require('passport');
+const flash = require('connect-flash');
 const passportLocalMongoose = require('passport-local-mongoose');
 const bodyParser = require('body-parser');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
@@ -18,6 +19,7 @@ const app = express();
 app.use(express.static("assets"));
 app.set('view engine', 'ejs');
 
+app.use(flash());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(session({
   secret: process.env.SECRET,
@@ -143,7 +145,11 @@ User.register({username: req.body.username}, req.body.password, function(error, 
 
 });
 
-app.post("/signIn", passport.authenticate("local"), function(req,res){
+app.post("/signIn", passport.authenticate("local",
+{
+  failureFlash: 'Invalid Username or Password'
+}), 
+function(req,res){
 const user = new User({
   username: req.body.username,
   password: req.body.password
@@ -151,7 +157,7 @@ const user = new User({
 
 req.login(user, function(error){
   if(error){
-    console.log(error);
+    console.log(failureFlash);
   }
   else{
     passport.authenticate("local")(req,res,function(){
@@ -168,7 +174,7 @@ app.listen(process.env.PORT || 3000, function(){
 
 
 
-//Sign-in authentication
+/*Sign-in authentication
 
 function validate() {
   var username = document.getElementById("email").value;
@@ -183,8 +189,6 @@ function validate() {
       alert("Please enter the password.");
       return false;
   }
-
-  /*
 
   for(i = 0; i < user.length;i++)
   { if(username == user[i].username && password == user[i].password) {
@@ -201,6 +205,6 @@ function validate() {
     else if (password !== user[n].password){
           alert("Incorrect password");
       return false;}
-    }
+    }}
   */
-}
+
