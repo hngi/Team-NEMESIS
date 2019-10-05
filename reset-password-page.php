@@ -45,12 +45,23 @@ if( $validated == false){
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Forgot Password</title>
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    
+    <!-- <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" as="style" rel="preload" onload="this.rel='stylesheet'"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" as="style" rel="preload" onload="this.rel='stylesheet'">
+    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+
+
+
+
+    
     <link rel="stylesheet" href="forgot-password.css" />
   </head>
   <body>
@@ -78,10 +89,34 @@ if( $validated == false){
              :rules="emailRules" outlined  label="email"
               placeholder="Email" disabled  ></v-text-field>
               </v-row> -->
-              <v-row class="d-flex flex-row justify-center mt-3">
+ 
+
+              <v-text-field
+            v-model="password"
+            :append-icon="show1 ? 'visibility' : 'visibility_off'"
+            :rules="passwordRules"
+            :type="show1 ? 'text' : 'password'"
+            name="input-10-1"
+            label="New Password" 
+            counter
+            @click:append="show1 = !show1"
+          ></v-text-field>
+
+          <!-- <v-text-field
+            v-model="password2"
+            :append-icon="show2 ? 'visibility' : 'visibility_off'"
+            :rules="passwordMatch"
+            :type="show2 ? 'text' : 'password'"
+            name="input-10-1"
+            label="Retype Password" 
+            counter
+            @click:append="show2 = !show2"
+          ></v-text-field>
+  -->
+              <!-- <v-row class="d-flex flex-row justify-center mt-3">
             <v-text-field name="password" v-model="password"
              :rules="passwordRules" outlined  label="Password"
-              placeholder="Enter new password"  required></v-text-field>
+              placeholder="Enter new password"  required></v-text-field> -->
           </div>
           </v-row>
           <br/><br/>  
@@ -165,7 +200,10 @@ if( $validated == false){
             data: {
                 msg: "",
                 loading: false, 
+                show1: true, 
+                show2: true,
                 password: "", 
+                password2:"",
                 email: "<?php echo $email ?>",
                 emailRules: [
                     v => /^([\w\d\.]+)@([\w]{2,6})\.([\w]{2,5})(\.[\w]{2,4})?$/g.test(v) || 'must be a valid email address'
@@ -175,6 +213,8 @@ if( $validated == false){
                     v => /[A-Z]+/.test(v) || "must contain uppercase alphabets",
                     v => /[\d]+/.test(v) || "must contain numbers",
                 ],
+                passwordMatch: [ v =>  (this.password == this.password2)  || 'Password does not match'],
+                
             },
             methods: {
                 
@@ -185,7 +225,7 @@ if( $validated == false){
                         $.ajax({
                             type: "post",
                             //url: "http://localhost/Team-Nemesis-Task5/Team-NEMESIS/processreset.php",
-                            url: "//nemesis-tweetbot.herokuapp.com/processreset.php",
+                            url: "//nemesis-twitterbot.herokuapp.com/processreset.php",
                             data: { 
                                 "email": this.email,
                                 "password": this.password
