@@ -1,0 +1,33 @@
+#nemesis-header {
+font-family: Fugaz One;
+font-size: 45px;
+margin-left: 44px;
+}
+
+@media(max-width: 504px) {
+#nemesis-header {
+    font-family: Fugaz One;
+    font-size: 33px;
+    }
+}
+
+@media (min-width: 398px) and (max-width: 432px) {
+#nemesis-header {
+    font-family: Fugaz One;
+    font-size: 32px;
+    }
+}
+
+@media(max-width:468px) {
+#nemesis-header {
+    font-family: Fugaz One;
+    font-size: 37px;
+    }
+}
+
+@media(max-width:395px) {
+#nemesis-header {
+    font-family: Fugaz One;
+    font-size: 27px;
+    }
+}

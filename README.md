@@ -27,6 +27,8 @@
 * User send conversations to external drive from twitter
 * User logins to external drive to see tweets
 
+>keep  checking this readme for future instructions
+
 >submission date: 28th of september 2019
 
 
