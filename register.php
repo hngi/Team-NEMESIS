@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nemesis Twitter Bot Landing Page</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="register.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -34,7 +35,10 @@
                                 </v-col>
                             </v-row>
                             <v-row class="d-flex flex-column justify-center align-center">
-                                <div :class="{'ml-12': $vuetify.breakpoint.mdAndDown}" style="font-family: Fugaz One; font-size: 45px;">Nemesis Tweetbot</div>
+                                <!-- :class="{'ml-12': $vuetify.breakpoint.mdAndDown}" -->
+                                <v-col>
+                                    <div id="nemesis-header">Nemesis Tweetbot</div>
+                                </v-col>
                             </v-row>
                             <v-row class="">
                                 <v-col class="d-flex flex-row justify-center">
@@ -53,13 +57,13 @@
                                 </v-col>
                             </v-row>
                             <v-row class="">
-                                <v-col class="d-flex flex-row justify-center">
+                                <v-col class=" px-5 d-flex flex-row justify-center">
                                     <div>Save Tweet directly from twitter to external drive</div>
                                 </v-col>
                             </v-row>
 
                             <v-row class="">
-                                <v-col class="d-flex flex-row justify-center">
+                                <v-col class="d-flex px-5 flex-row justify-center">
                                     <img src="https://res.cloudinary.com/dzwnhcpep/image/upload/v1569341616/Team%20Nemesis_twitterBot/file_icon_a8sddq.svg" alt="">
                                 </v-col>
                             </v-row>
