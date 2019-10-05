@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nemesis Twitter Bot Login Page</title>
+    <title>Nemesis Twitter Bot About Us Page</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -34,22 +34,6 @@
     <div id="app">
         <v-app>
             <!-- style="background-color: rgba(29, 161, 242, 0.4);"  -->
-            <v-toolbar extended>
-
-            <!-- <v-toolbar-title>Title</v-toolbar-title> -->
-
-                <v-container class="display-3 text-center">
-                    <div style="font-family: Fugaz One;">Nemesis Tweetbot</div>
-                </v-container>
-                <v-container class="text-center">
-                    <v-btn @click.prevent="gotoLogin" href="signin.php" outlined color="blue" style="background-color: white; border-radius: 20px;">log in</v-btn>
-                    <v-btn @click.prevent="gotoRegister" href="signup.php" outlined color="blue" style="background-color: white;  border-radius: 20px;">Sign up</v-btn>
-                    <v-btn @click.prevent="gotoAbout" href="about.php" outlined color="blue" style="background-color: white;  border-radius: 20px;">About Us</v-btn>
-                </v-container>
-
-
-
-            </v-toolbar>
             <v-row>
                 <v-col cols="12" xl="6" md="6" xs="12" sm="12" lg="6" style="background-color: rgba(29, 161, 242, 0.4);">
                     <v-container>
@@ -102,31 +86,27 @@
                     </v-container>
                 </v-col>
 
-                <v-col xs="12" sm="12" md="6" lg="6" xl="6" cols="12" class="d-flex flex-column justify-center align-center">
-                    <v-card class="d-flex pa-8 flex-column justify-center align-center pa-3" min-width="400px">
-                        <v-card-title class="text-center">Welcome</v-card-title>
-                        <v-container>
-                            <v-form ref="login">
-                                <v-text-field name="username" v-model="username" :rules="usernameRules" outlined color="blue" label="Username" placeholder="enter your username" count="10"></v-text-field>
-                                <v-text-field :rules="passwordRules" type="password" v-model="password" outlined label="Password" placeholder="enter your Password" color="blue" count="10"></v-text-field>
-                                <v-row class="d-flex flex-row justify-center">
-                                    <v-btn @click="submit" color="#39a2e4" dark min-width="300px">Log in</v-btn>
-                                </v-row>
-                            </v-form>
-                            <v-row class="d-flex flex-row justify-center mt-3">
-                                <v-btn @click="gotoSignupWithTwitter" min-width="300px" color="#39a2e4" dark>Sign in with twitter</v-btn>
-                            </v-row> 
-                            <v-row class="d-flex flex-row justify-center mt-3" style="cursor:pointer">
-                                <div  @click="gotoForgot" class="ma-2 mt-4" style="font-size:13px;color:#848d94;">forgot your password?</div>
-                            </v-row>
-                            <v-row class="d-flex flex-row justify-center mt-3">
-                                <div class="ma-2 mt-4" style="font-size:13px;color:#848d94;">don't have an account?</div>
-                                <br/>
-                                
-                                <v-btn @click="gotoRegister" class="ma-2" color="#39a2e4" dark>Sign up</v-btn>
-                            </v-row>
-                        </v-container>
-                    </v-card>
+                <v-col xs="12" sm="12" md="6" lg="6" xl="6" cols="12" class="d-flex flex-column justify-top align-center">
+                    
+                    <div class="about-us">
+                        <h1> About Us </h1>
+                        <hr/>
+                        <h4> Nemesis Tweetbot is an application that saves tweet directly from twitter account to an external drive.</h4>
+                        <p>It's built by Team Nemesis of HNG-Internship-6. It's completely open source.</p>
+                        <hr />
+                        <h2>Features of the Application</h2>
+                        <li>
+                            <ul>A twitter bot that saves tweets in external drive</ul>
+                            <ul>User sign up (on external drive)</ul>
+                            <ul>User link external drive with their twitter account</ul>
+                            <ul>User send conversations to external drive from twitter</ul>
+                            <ul>User logins to external drive to see tweets</ul>
+                        </li>
+
+                        <hr />
+                        <p>Here is a link to the project on <a href="https://github.com/LuminousIT/Team-NEMESIS">Github.</a> </p>
+                        
+                    </div>
                 </v-col>
             </v-row>
         </v-app>
@@ -163,9 +143,6 @@
                 gotoRegister: function() {
                     window.location.href = "register.php";
                 },
-                gotoForgot: function() {
-                    window.location.href = "forgot-password.php";
-                },
                 gotoSignupWithTwitter: function() {
                     window.location.href = "api.php";
                 },
@@ -173,9 +150,6 @@
                     if (this.$refs.login.validate()) {
                         this.gotoSignupWithTwitter();
                     }
-                },
-                gotoAbout: function() {
-                    window.location.href = "about.php";
                 },
             },
             computed: {

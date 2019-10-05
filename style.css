@@ -269,6 +269,12 @@
     margin-top: 93px;
 
 }
+.about-us h1{
+    font-family: Fugaz One;
+}
+.about-us h1, h2 {
+    color: #0168A7;
+}
 /*
 .signuprdr {
     background: #FFFFFF ;
