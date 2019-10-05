@@ -2,8 +2,8 @@
 $user['name'] = $_POST['name'];
 $user['dp'] = "";
 $user['email'] = "";
-$user['text'] = $text;
-$user['username'] = $username;
+//$user['text'] = $text;
+//$user['username'] = $username;
 $user['logged_in'] = true;
 
 $file_content = file_get_contents('users.json');
@@ -30,6 +30,6 @@ if ($user_exists) {
     $users_db[] = $new_user;
     $users_db = json_encode($users_db);
     file_put_contents('users.json', $users_db);
-    $data['msg'] = "user registered successful";
+    $data['msg'] = "user registered successfully";
     echo json_encode($data);
 }

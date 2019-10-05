@@ -1,16 +1,1 @@
-[
-    {
-        "name": "admin",
-        "email": "admin@admin.com",
-        "password": "$2y$10$KEPbOqrVQalfL9Xz6uACYeqZX7.bB0AuvLFXaMdQAaujm5MTE0MYe"
-    },
-    {
-        "name": "sphinx",
-        "email": "ojinakatochukwu@gmail.com",
-        "password": "$2y$10$YON1GXHsxWuwIelPE8Y5hehStIMjWJPgVbHiwwEMz1HoScYhLfiu.",
-        "dp": "",
-        "text": "",
-        "username": "",
-        "logged_in": ""
-    }
-]
+[{"name":"admin","email":"admin@admin.com","password":"$2y$10$KEPbOqrVQalfL9Xz6uACYeqZX7.bB0AuvLFXaMdQAaujm5MTE0MYe"},{"name":"sphinx","email":"ojinakatochukwu@gmail.com","password":"$2y$10$YON1GXHsxWuwIelPE8Y5hehStIMjWJPgVbHiwwEMz1HoScYhLfiu.","dp":"","text":"","username":"","logged_in":""},{"name":"","email":"","password":"$2y$10$4L3OflKKwwOBQR59wFdzReedmg9K2MxFfPquh0LClGr3fJk3f6QEG","dp":"","text":"","username":"","logged_in":""},{"email":"happinessblgn0@gmail.com","name":"happiness","password":"$2y$10$ctKmpGQHEcalrgZSOUUKAOGxiSKzVm73Ru3iVcBaMzxCJImKE0Klu","dp":"","text":"","username":"","logged_in":""},{"email":"happinessblgn0@gmail.com","name":"happiness","password":"$2y$10$6JKuOTnutTDkrzFfEyIOPOkMkmGPXt0Fy36eUX5VwfEwZLbVDMYJu","dp":"","text":"","username":"","logged_in":""},{"email":"happinessblgn0@gmail.com","name":"happiness","password":"$2y$10$n4KQZMI1UbpGsDDsbefRZ.7s88hezPq5BMmBMq7WiTawOUrEInN..","dp":"","text":"","username":"","logged_in":""},{"email":"happinessblgn0@gmail.com","name":"happiness","password":"$2y$10$IA5MYMIK9Qtc7lZcFz6Gf.Dfv3s1IxijXfFtAJO.331\/vpEhsHxfO","dp":"","text":"","username":"","logged_in":""},{"email":"happinessblgn0@gmail.com","name":"happiness","password":"$2y$10$kIpm5LXWrH8xzZ6odM76aeAN..eShEXZSpJPdqx2fhgO7XrUGU21i","dp":"","text":"","username":"","logged_in":""},{"email":"happinessblgn0@gmail.com","name":"happiness","password":"$2y$10$pXP2eKfKI2TW8nkeQmXSl.gwlyrB14rhdmA1Q6gqafG2dhpVe6JIS","dp":"","text":"","username":"","logged_in":""},{"email":"happinessblgn0@gmail.com","name":"happiness","password":"$2y$10$s2UzLxekFzuUuFEL\/HrJe.2BNME6f.2bBuVqs2yzY.URAxgsyadZu","dp":"","text":"","username":"","logged_in":""},{"email":"happinessblgn0@gmail.com","name":"happiness","password":"$2y$10$XxoNm9U7lckKFyJzawr7CevfoX05NQxzorVoxsVX88tlhw.YZSq\/6","dp":"","text":"","username":"","logged_in":""},{"name":"happiness2","email":"oyinig@gmail.com","password":"$2y$10$YhdozXKfx.RrKgmFNxVxPO4aTRsJdo1sA924cYhmqNbg.XqFuUcEG","dp":"","text":"","username":"","logged_in":""},{"email":"happinessblgn0@gmail.com","password":"$2y$10$F1U45FXCaZ2kVr2224AY7.ziMj9kQc\/bAZYv9uUsXN5EYmd5xgNXe","dp":"","text":"","username":"","logged_in":"","name":"happiness"},{"email":"happinessblgn0@gmail.com","password":"$2y$10$D8TBzQ5pP9LONBqwzIVqZ.zXpWUYJnLoncxV1U21Qb.bHQMkrXCTK","dp":"","text":"","username":"","logged_in":"","name":"happiness"},{"email":"happinessblgn0@gmail.com","password":"$2y$10$Q9erVbsmh3EP\/gy18cyn2OGBx19fykX8CAkOFmuorJr7fWsr1WCD2","dp":"","text":"","username":"","logged_in":"","name":"happiness"},{"email":"happinessblgn0@gmail.com","password":"$2y$10$pOAnCwHlHvMB6LrV6eSogee5REqt8vX1XKqYPyrOGd6FpnRf9FjTa","dp":"","text":"","username":"","logged_in":"","name":"happiness"}]
