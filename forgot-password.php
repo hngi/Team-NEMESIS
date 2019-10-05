@@ -148,7 +148,7 @@
                         $.ajax({
                             type: "post",
                            // url: "http://localhost/Team-Nemesis-Task5/Team-NEMESIS/processforgot.php",
-                            url: "http://nemesis-tweetbot.herokuapp.com/processforgot.php",
+                            url: "//nemesis-tweetbot.herokuapp.com/processforgot.php",
                             data: { 
                                 "email": this.email
                             },
