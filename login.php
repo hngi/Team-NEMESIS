@@ -15,7 +15,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nemesis Twitter Bot Landing Page</title>
+    <title>Nemesis Twitter Bot Login Page</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -23,6 +23,8 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet"> -->
     <!-- <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet"> -->
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
+
     <style>
         @import url("https://fonts.googleapis.com/css?family=Fugaz+One|Lato:400,700|Montserrat:400,700&display=swap");
     </style>
@@ -42,7 +44,10 @@
                                 </v-col>
                             </v-row>
                             <v-row class="d-flex flex-column justify-center align-center">
-                                <div :class="{'ml-12': $vuetify.breakpoint.mdAndDown}" style="font-family: Fugaz One; font-size: 45px;">Nemesis Tweetbot</div>
+                                <!-- :class="{'ml-12': $vuetify.breakpoint.mdAndDown}" -->
+                                <v-col>
+                                    <div id="nemesis-header">Nemesis Tweetbot</div>
+                                </v-col>
                             </v-row>
                             <v-row class="">
                                 <v-col class="d-flex flex-row justify-center">
