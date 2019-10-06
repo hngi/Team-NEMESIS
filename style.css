@@ -4,6 +4,10 @@
                 padding: 0;
                 box-sizing: border-box;
             }
+
+            #display-3 {
+                padding-top: 5%;
+            }
             
             .first_column,
             .second_column {
